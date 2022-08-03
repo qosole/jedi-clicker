@@ -3,7 +3,9 @@ const { User } = require('../models');
 const userData = [
     // Admin account
     {
-        username: 'qosole'
+        username: 'qosole',
+        password: 'password',
+        galactic_credits: '99999999999999999999999999999'
     }
 ];
 
