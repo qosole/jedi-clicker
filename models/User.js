@@ -26,13 +26,6 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    item_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'item',
-        key: 'id'
-      }
-    },
     galactic_credits: {
       type: DataTypes.INTEGER,
       allowNull: false
