@@ -1,11 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Item extends Model {
-    canAfford(galacticCreditCount) { return galacticCreditCount >= this.price; }
-}
+class UserItem extends Model {}
 
-Item.init(
+// Through table
+UserItem.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -13,23 +12,18 @@ Item.init(
             primaryKey: true,
             autoIncrement: true
         },
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        price: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        strength: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        // Stores have many items
-        store_id: {
+        // Users have many items, items have many users
+        user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'store',
+                model: 'user',
+                key: 'id'
+            }
+        },
+        item_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'item',
                 key: 'id'
             }
         }
@@ -39,8 +33,8 @@ Item.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'item',
+        modelName: 'user_item',
     }
 );
 
-module.exports = Item;
+module.exports = UserItem;

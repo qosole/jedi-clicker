@@ -2,6 +2,7 @@
 const Item = require('./Item');
 const Store = require('./Store');
 const User = require('./User');
+const UserItem = require('./UserItem');
 
 // Items belongsTo Store
 Item.belongsTo(Store, {
@@ -15,16 +16,10 @@ Store.hasMany(Item, {
     onDelete: 'CASCADE'
 });
 
-// Items belongsTo User
-Item.belongsTo(User, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE'
-});
+// Items belongsToMany Users (many to many; through UserItem)
+Item.belongsToMany(User, { through: UserItem });
 
-// Users have many Items
-User.hasMany(Item, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE'
-})
+// Users belongsToMany Items (many to many; through UserItem)
+User.belongsToMany(Item, { through: UserItem });
 
-module.exports = { Item, Store, User };
+module.exports = { Item, Store, User, UserItem };

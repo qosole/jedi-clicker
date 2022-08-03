@@ -19,7 +19,6 @@ Store.init(
         is_discount: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
-            defaultValue: false
         }
     },
     {

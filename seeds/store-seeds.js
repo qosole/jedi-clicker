@@ -2,7 +2,12 @@ const { Store } = require('../models');
 
 const storeData = [
     {
-
+        name: 'Equipment',
+        is_discount: false
+    },
+    {
+        name: 'Mercenaries',
+        is_discount: false
     }
 ];
 
