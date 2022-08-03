@@ -1,8 +1,9 @@
 const { User } = require('../models');
 
 const userData = [
+    // Admin account
     {
-
+        username: 'qosole'
     }
 ];
 
