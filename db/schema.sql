@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS jedi_db;
+CREATE DATABASE jedi_db;
