@@ -24,6 +24,22 @@ Item.init(
         strength: {
             type: DataTypes.INTEGER,
             allowNull: false
+        },
+        // Users have many items
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id'
+            }
+        },
+        // Stores have many items
+        store_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'store',
+                key: 'id'
+            }
         }
     },
     {
