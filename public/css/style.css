@@ -14,13 +14,15 @@ main {
 }
 
 #logo {
+    height: 15vh;
     margin-bottom: 20px;
     text-align: center;
     background-color: yellow;
 }
 
 .logo {
-    height: 80px;
+    height: 90%;
+    margin-top: 10px;
 }
 
 /* Center Div Stylings */
@@ -36,10 +38,15 @@ main {
 }
 
 #credits {
-    padding-top: 20px;
+    height: 15vh;
     margin-bottom: 10%;
     text-align: center;
     background-color: azure;
+}
+
+.credits {
+    align-items: center;
+    padding-top: 5%;
 }
 
 #enemy {
