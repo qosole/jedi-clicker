@@ -1,0 +1,36 @@
+main {
+    display: flex;
+    width: 100%;
+}
+
+#left {
+    display: flex;
+    width: 33vw;
+    height: 100vh;
+    background-color: red;
+}
+
+#center {
+    display: flex;
+    flex-direction: column;
+    width: 33vw;
+    background-color: green;
+    justify-content: center;
+    align-content: center;
+}
+
+#credits {
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: azure;
+}
+
+.enemy {
+    width: 80%;
+}
+
+#right {
+    display: flex;
+    width: 33vw;
+    background-color: blue;
+}
