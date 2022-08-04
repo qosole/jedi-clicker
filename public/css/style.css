@@ -1,5 +1,5 @@
 :root {
-    background-color: azure;
+    background-color: whitesmoke;
 }
 
 main {
@@ -94,6 +94,17 @@ h2 {
 #upgrades {
     display: flex;
     justify-content: center;
+}
+
+/* Footer Stylings */
+
+footer {
+    width: 100vw;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
 }
 
 /* Responsive Screen Breaking points */
