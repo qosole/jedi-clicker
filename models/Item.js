@@ -18,11 +18,11 @@ Item.init(
             allowNull: false
         },
         price: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.BIGINT,
             allowNull: false
         },
         strength: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.BIGINT,
             allowNull: false
         },
         // Stores have many items

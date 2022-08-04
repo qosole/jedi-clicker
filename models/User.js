@@ -27,7 +27,7 @@ User.init(
       allowNull: false
     },
     galactic_credits: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.BIGINT,
       allowNull: false
     }
   },

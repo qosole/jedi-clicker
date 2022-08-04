@@ -1,3 +1,4 @@
+const seedItems = require('./item-seeds');
 const seedStores = require('./store-seeds');
 const seedUsers = require('./user-seeds');
 const seedUserItems = require('./userItem-seeds');
@@ -11,6 +12,9 @@ const seedAll = async () => {
 
   await seedStores();
   console.log('\n----- STORE SEEDED -----\n');
+
+  await seedItems();
+  console.log('\n----- ITEMS SEEDED -----\n');
 
   await seedUsers();
   console.log('\n----- USER SEEDED -----\n');

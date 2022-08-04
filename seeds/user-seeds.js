@@ -5,7 +5,7 @@ const userData = [
     {
         username: 'qosole',
         password: 'password',
-        galactic_credits: '99999999999999999999999999999'
+        galactic_credits: '99999999999999'
     }
 ];
 
