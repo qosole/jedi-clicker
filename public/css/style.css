@@ -18,7 +18,6 @@ h2 {
     flex-direction: column;
     width: 33vw;
     height: 100vh;
-    background-color: red;
 }
 
 #logo {
@@ -26,7 +25,6 @@ h2 {
     margin-bottom: 20px;
     text-align: center;
     border-bottom: 2px solid grey;
-    background-color: azure;
 }
 
 .logo {
@@ -40,7 +38,6 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 33vw;
-    background-color: green;
     align-content: center;
     border-left: 2px solid black;
     border-right: 2px solid black;
@@ -51,7 +48,6 @@ h2 {
     margin-bottom: 10%;
     text-align: center;
     border-bottom: 2px solid grey;
-    background-color: azure;
 }
 
 .credits {
@@ -75,7 +71,7 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 33vw;
-    background-color: blue;
+    height: 100vh;
 }
 
 #storeTitle {
@@ -83,7 +79,6 @@ h2 {
     margin-bottom: 10%;
     text-align: center;
     border-bottom: 2px solid grey;
-    background-color: azure;
 }
 
 .storeTitle {
@@ -95,4 +90,26 @@ h2 {
     display: flex;
     justify-content: center;
 
+}
+
+/* Responsive Screen Breaking points */
+
+@media only screen and (max-width: 900px) {
+    main {
+        flex-direction: column;
+    }
+    #left {
+        width: 95vw;
+        height: auto;
+    }
+    #center {
+        width: 95vw;
+        height: auto;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    #right {
+        width: 95vw;
+        height: auto;
+    }
 }
