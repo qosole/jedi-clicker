@@ -32,6 +32,11 @@ h2 {
     margin-top: 10px;
 }
 
+#upgradesBought {
+    display: flex;
+    justify-content: center;
+}
+
 /* Center Div Stylings */
 
 #center {
@@ -76,7 +81,7 @@ h2 {
 
 #storeTitle {
     height: 15vh;
-    margin-bottom: 10%;
+    margin-bottom: 20px;
     text-align: center;
     border-bottom: 2px solid grey;
 }
@@ -89,7 +94,6 @@ h2 {
 #upgrades {
     display: flex;
     justify-content: center;
-
 }
 
 /* Responsive Screen Breaking points */
