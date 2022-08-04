@@ -1,0 +1,130 @@
+:root {
+    background-color: whitesmoke;
+}
+
+main {
+    display: flex;
+    width: 100%;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+/* Left Div Stylings */
+
+#left {
+    display: flex;
+    flex-direction: column;
+    width: 33vw;
+    height: 100vh;
+}
+
+#logo {
+    height: 15vh;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid grey;
+}
+
+.logo {
+    height: 90%;
+    margin-top: 10px;
+}
+
+#upgradesBought {
+    display: flex;
+    justify-content: center;
+}
+
+/* Center Div Stylings */
+
+#center {
+    display: flex;
+    flex-direction: column;
+    width: 33vw;
+    align-content: center;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#credits {
+    height: 15vh;
+    margin-bottom: 10%;
+    text-align: center;
+    border-bottom: 2px solid grey;
+}
+
+.credits {
+    align-items: center;
+    padding-top: 5%;
+}
+
+#enemy {
+    display: flex;
+    justify-content: center;
+
+}
+
+.enemy {
+    width: 80%;
+}
+
+/* Right Div Stylings */
+
+#right {
+    display: flex;
+    flex-direction: column;
+    width: 33vw;
+    height: 100vh;
+}
+
+#storeTitle {
+    height: 15vh;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid grey;
+}
+
+.storeTitle {
+    align-items: center;
+    padding-top: 5%;
+}
+
+#upgrades {
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer Stylings */
+
+footer {
+    width: 100vw;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* Responsive Screen Breaking points */
+
+@media only screen and (max-width: 900px) {
+    main {
+        flex-direction: column;
+    }
+    #left {
+        width: 95vw;
+        height: auto;
+    }
+    #center {
+        width: 95vw;
+        height: auto;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    #right {
+        width: 95vw;
+        height: auto;
+    }
+}
