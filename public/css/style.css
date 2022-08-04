@@ -31,10 +31,13 @@ main {
     width: 33vw;
     background-color: green;
     align-content: center;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
 }
 
 #credits {
-    margin-bottom: 20px;
+    padding-top: 20px;
+    margin-bottom: 10%;
     text-align: center;
     background-color: azure;
 }
@@ -42,6 +45,7 @@ main {
 #enemy {
     display: flex;
     justify-content: center;
+
 }
 
 .enemy {
@@ -56,6 +60,20 @@ main {
 
 #right {
     display: flex;
+    flex-direction: column;
     width: 33vw;
     background-color: blue;
+}
+
+#storeTitle {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: azure;
+}
+
+#upgrades {
+    display: flex;
+    justify-content: center;
+
 }
