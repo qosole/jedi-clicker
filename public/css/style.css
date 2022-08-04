@@ -3,19 +3,33 @@ main {
     width: 100%;
 }
 
+/* Left Div Stylings */
+
 #left {
     display: flex;
+    flex-direction: column;
     width: 33vw;
     height: 100vh;
     background-color: red;
 }
+
+#logo {
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: yellow;
+}
+
+.logo {
+    height: 80px;
+}
+
+/* Center Div Stylings */
 
 #center {
     display: flex;
     flex-direction: column;
     width: 33vw;
     background-color: green;
-    justify-content: center;
     align-content: center;
 }
 
@@ -25,9 +39,20 @@ main {
     background-color: azure;
 }
 
+#enemy {
+    display: flex;
+    justify-content: center;
+}
+
 .enemy {
     width: 80%;
 }
+
+.credits {
+    height: 30px;
+}
+
+/* Right Div Stylings */
 
 #right {
     display: flex;
