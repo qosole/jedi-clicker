@@ -11,12 +11,14 @@ Store.init(
             primaryKey: true,
             autoIncrement: true
         },
-        item_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'item',
-                key: 'id'
-            }
+        // Base game will have 2 stores: equipment and mercenary
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        is_discount: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
         }
     },
     {
