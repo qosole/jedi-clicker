@@ -50,10 +50,8 @@ router.get('/:id', async (req, res) => {
 
         // Combining the queries
         const gameData = JSON.parse('[' + JSON.stringify(userData) + ',' + JSON.stringify(userItemCount) + ',' + JSON.stringify(storeData) + ']');
-     
-        res.json(gameData);
 
-        //res.render('homepage', { gameData });
+        res.render('homepage', { gameData });
 
     } catch (err) { res.status(500).json(err); }
 });
