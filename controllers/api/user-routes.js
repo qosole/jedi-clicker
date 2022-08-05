@@ -50,6 +50,34 @@ router.post('/', async (req, res) => {
     } catch (err) { res.status(500).json(err); }
 });
 
+// Update a user's galactic_credit by id
+router.put('/:id', async (req, res) => {
+    try {
+        // req.body should have galactic_credits
+        const user = await User.findByPk(req.params.id);
+        if (!user) {
+            res.status(404).json({ message: 'No user found with that id' });
+            return;
+        }
+
+        user.galactic_credits = req.body.galactic_credits;
+        await user.save();
+
+    } catch (err) { res.status(500).json(err); }
+});
+
+// Update a user's items by id
+router.put('/items/:id', async (req, res) => {
+    try {
+        // req.body should have item_id
+        const newUserItemData = {
+            user_id: req.params.id,
+            item_id: req.body.item_id
+        };
+        const userItem = await UserItem.create(newUserItemData);
+    } catch (err) { res.status(500).json(err); }
+})
+
 // Delete a user by id
 router.delete('/:id', async (req, res) => {
     try {
