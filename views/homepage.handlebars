@@ -4,7 +4,11 @@
               <img class="logo" src="/assets/images/Jedi-Clicker-Logo.png" />
             </div>
             <div id="upgradesBought">
-              {{bought}}
+              {{#each gameData.0.items as item}}
+                <p>
+                  {{item.name}} x{{item}}
+                </p>
+              {{/each}}
             </div>
         </div>
 
