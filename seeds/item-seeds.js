@@ -9,21 +9,27 @@ const itemData = [
         store_id: 1
     },
     {
-        name: 'Wampa Cloak',
-        price: 20,
-        strength: 2,
+        name: 'Blaster Gun',
+        price: 50,
+        strength: 5,
         store_id: 1
     },
     {
-        name: 'Blaster',
-        price: 50,
+        name: 'Helper Droid',
+        price: 200,
         strength: 10,
         store_id: 1
     },
     {
         name: 'Lightsaber',
-        price: 200,
+        price: 500,
         strength: 60,
+        store_id: 1
+    },
+    {
+        name: 'Double-Sided Lightsaber',
+        price: 1000,
+        strength: 120,
         store_id: 1
     },
     {
@@ -37,7 +43,7 @@ const itemData = [
     {
         // Gives a certain discount to all items in both stores
         name: 'Vince Lee',
-        price: 1000000,
+        price: 2000000,
         strength: 40000,
         store_id: 2
     },
@@ -51,6 +57,13 @@ const itemData = [
     {
         // Converts you to the dark side, increasing strength by a certain amount
         name: 'Manuel Nunez',
+        price: 1000000000,
+        strength: 70000000,
+        store_id: 2
+    },
+    {
+        // Converts you to the dark side, increasing strength by a certain amount
+        name: 'Jerome Chenette',
         price: 1000000000,
         strength: 70000000,
         store_id: 2
