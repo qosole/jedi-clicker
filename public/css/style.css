@@ -108,6 +108,22 @@ footer {
     box-sizing: border-box;
 }
 
+/* Rebellion and Empire Logo Stylings */
+
+#chooseGame {
+    text-align: center;
+}
+
+.rebellion {
+    width: 49%;
+    cursor: url('../assets/images/Rebels-Cursor.png'),auto;
+}
+
+.empire {
+    width: 49%;
+    cursor: url('../assets/images/Empire-Cursor.png'),auto;
+}
+
 /* Responsive Screen Breaking points */
 
 @media only screen and (max-width: 900px) {
