@@ -46,6 +46,7 @@ h2 {
     align-content: center;
     border-left: 2px solid black;
     border-right: 2px solid black;
+    cursor: url('../assets/images/Lightsaber-Cursor.png'),auto;
 }
 
 #credits {
@@ -122,6 +123,8 @@ footer {
         height: auto;
         padding-top: 2%;
         padding-bottom: 2%;
+        border-left: none;
+        border-right: none;
     }
     #right {
         width: 95vw;

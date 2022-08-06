@@ -1,0 +1,41 @@
+    <main>
+        <div id="left">
+            <div id="logo">
+              <img class="logo" src="/assets/images/Jedi-Clicker-Logo.png" />
+            </div>
+            <div id="upgradesBought">
+              {{gameData.[1]}}
+            {{!-- {{#each gameData.[1]}}
+                <p>
+                  {{@key}} x{{this}}
+                </p>
+            {{/each}} --}}
+            </div>
+        </div>
+
+        <div id="center">
+            <div id="credits">
+              <h2 class="credits">Credits: {{gameData.0.galactic_credits}}</h2>
+            </div>
+            <div id="enemy">
+              <img class="enemy" src="/assets/images/Light-Enemy.png" />
+            </div>
+        </div>
+
+        <div id="right">
+            <div id="storeTitle">
+              <h2 class="storeTitle">Store</h2>
+            </div>
+            <div id="upgrades">
+              {{gameData.[2]}}
+              {{!-- {{#each gameData.[2] as stores}}
+                  {{#each stores as store}}
+                    <h4>{{store.name}}</h4>
+                    {{#each store as item}}
+                      <p>{{item.name}}</p>
+                    {{/each}}
+                  {{/each}}
+            {{/each}} --}}
+            </div>
+        </div>
+    </main>
