@@ -57,11 +57,19 @@ h2 {
     cursor: url('../assets/images/Rebels-Cursor.png'), auto;
 }
 
+.rebellion:hover {
+    opacity: .7;
+}
+
 .empire {
     width: 35%;
     padding: 2%;
     box-sizing: border-box;
     cursor: url('../assets/images/Empire-Cursor.png'), auto;
+}
+
+.empire:hover {
+    opacity: .7;
 }
 
 /* Item Stylings */
@@ -234,6 +242,13 @@ h2 {
 
 .enemy {
     width: 80%;
+}
+
+/* Enemy On Click Actions */
+
+.enemy:active {
+    opacity: .9;
+    cursor: url('../assets/images/Lightsaber-Cursor-Active.png'), auto;
 }
 
 /* Right Div Stylings */
