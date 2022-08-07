@@ -27,6 +27,10 @@ h2 {
     font-size: 28px;
 }
 
+img {
+    -webkit-user-drag: none;
+}
+
 /* Homepage Stylings */
 
 #homepage {
@@ -114,6 +118,11 @@ h2 {
     cursor: pointer;
 }
 
+.itemcard-light:hover {
+    opacity: .8;
+    border: 3px rgb(52, 180, 230) solid;
+}
+
 .itemcard-dark {
     width: 30%;
     border: 3px maroon solid;
@@ -122,6 +131,11 @@ h2 {
     box-sizing: border-box;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.itemcard-dark:hover {
+    opacity: .8;
+    border: 3px rgb(171, 0, 0) solid;
 }
 
 .item {
@@ -162,6 +176,10 @@ h2 {
     cursor: pointer;
 }
 
+.mercenarycard-light:hover {
+    opacity: .8;
+}
+
 .mercenarycard-dark {
     width: 48%;
     border: 3px maroon solid;
@@ -170,6 +188,11 @@ h2 {
     box-sizing: border-box;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.mercenarycard-dark:hover {
+    opacity: .8;
+    border: 3px rgb(171, 0, 0) solid;
 }
 
 .mercenary {
@@ -242,11 +265,6 @@ h2 {
 
 .enemy {
     width: 80%;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
 }
 
 /* Enemy On Click Actions */
