@@ -318,7 +318,6 @@ footer {
     text-align: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
     width: 100%;
 }
 
@@ -399,9 +398,6 @@ form {
       display: block;
       float: none;
     }
-    .cancelbtn {
-      width: 100%;
-    }
   }
 
 /* Responsive Screen Breaking points */
@@ -433,5 +429,18 @@ form {
     #right {
         width: 95vw;
         height: auto;
+    }
+
+    #loginOrCreate {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    #loginDiv {
+        width: 100%;
+    }
+    
+    #createDiv {
+        width: 100%;
     }
 }
