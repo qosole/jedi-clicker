@@ -1,41 +1,82 @@
-    <main>
+    <main class="lightmain">
         <div id="left">
             <div id="logo">
-              <img class="logo" src="/assets/images/Jedi-Clicker-Logo.png" />
+                <img class="logo" src="/assets/images/Jedi-Clicker-Logo.png" />
             </div>
             <div id="upgradesBought">
-              {{gameData.[1]}}
-            {{!-- {{#each gameData.[1]}}
+              <h2 class="secondaryTitle">Items Bought</h2>
+                {{gameData.[1]}}
+                {{!-- {{#each gameData.[1]}}
                 <p>
-                  {{@key}} x{{this}}
+                    {{@key}} x{{this}}
                 </p>
-            {{/each}} --}}
+                {{/each}} --}}
             </div>
         </div>
 
         <div id="center">
             <div id="credits">
-              <h2 class="credits">Credits: {{gameData.0.galactic_credits}}</h2>
+                <h1 class="credits">Credits: {{gameData.0.galactic_credits}}</h1>
             </div>
             <div id="enemy">
-              <img class="enemy" src="/assets/images/Light-Enemy.png" />
+                <img class="enemy" src="/assets/images/Dark-Enemy.png" />
             </div>
         </div>
 
         <div id="right">
             <div id="storeTitle">
-              <h2 class="storeTitle">Store</h2>
+                <h1 class="storeTitle">Store</h1>
             </div>
             <div id="upgrades">
-              {{gameData.[2]}}
-              {{!-- {{#each gameData.[2] as stores}}
-                  {{#each stores as store}}
-                    <h4>{{store.name}}</h4>
-                    {{#each store as item}}
-                      <p>{{item.name}}</p>
-                    {{/each}}
+                <div class="items">
+                    <h2 class="secondaryTitle">Items</h2>
+                    <div class=itemlist1>
+                        <div class="itemcard-light"><span class=cardTitle>Training Stick</span><img class="item"
+                                title="Training Stick" src="/assets/images/Item-Training-Stick-Light.png" /><span
+                                class=itemAttributes><strong>+1 Strength</strong><br />Price: 25</span></div>
+                        <div class="itemcard-light"><span class=cardTitle>Blaster Gun</span><img class="item"
+                                title="Blaster Gun" src="/assets/images/Item-Blaster-Gun-Light.png" /><span
+                                class=itemAttributes><strong>+3 Strength</strong><br />Price: 100</span></div>
+                        <div class="itemcard-light"><span class=cardTitle>Helper Droid</span><img class="item"
+                                title="Helper Droid" src="/assets/images/Item-Helper-Droid-Light.png" /><span
+                                class=itemAttributes><strong>+6 Strength</strong><br />Price: 200</span></div>
+                    </div>
+                    <div class=itemlist2>
+                        <div class="itemcard-light"><span class=cardTitle>Lightsaber</span><img class="item"
+                                title="Lightsaber" src="/assets/images/Item-Lightsaber-Light.png" /><span
+                                class=itemAttributes><strong>+25 Strength</strong><br />Price: 500</span></div>
+                        <div class="itemcard-light"><span class=cardTitle>Double Lightsaber</span><img class="item"
+                                title="Double Sided Lightsaber"
+                                src="/assets/images/Item-Double-Sided-Lightsaber-Light.png" /><span
+                                class=itemAttributes><strong>+50 Strength</strong><br />Price: 1000</span></div>
+                        <div class="itemcard-light"><span class=cardTitle>Force Amplifier</span><img class="item"
+                                title="Force Amplifier" src="/assets/images/Item-Force-Amplifier-Light.png" /><span
+                                class=itemAttributes><strong>+500 Strength</strong><br />Price: 5000</span></div>
+                    </div>
+                </div>
+
+                <div class="mercenaries">
+                    <h2 class="secondaryTitle">Mercenaries</h2>
+                    <p>You can only choose one!</p>
+                    <div class=mercenarylist1>
+                        <div class="mercenarycard-light"><span class=cardTitle>Jedi Kevin</span><img class="mercenary" title="Jedi Kevin" src="/assets/images/Item-Jedi-Kevin-Light.png" /><span class=itemAttributes><strong>+1,500 Strength</strong><br />Price: 200,000</span></div>
+                        <div class="mercenarycard-light"><span class=cardTitle>Jedi Vince</span><img class="mercenary" title="Jedi Vince" src="/assets/images/Item-Jedi-Vince-Light.png" /><span class=itemAttributes><strong>+1,500 Strength</strong><br />Price: 200,000</span></div>
+                    </div>
+                    <div class=mercenarylist2>
+                        <div class="mercenarycard-light"><span class=cardTitle>Jedi Manuel</span><img class="mercenary" title="Jedi Manuel" src="/assets/images/Item-Jedi-Manuel-Light.png" /><span class=itemAttributes><strong>+3,000 Strength</strong><br />Price: 500,000</span></div>
+                        <div class="mercenarycard-light"><span class=cardTitle>Jedi Jerome</span><img class="mercenary" title="Jedi Jerome" src="/assets/images/Item-Jedi-Jerome-Light.png" /><span class=itemAttributes><strong>+3,000 Strength</strong><br />Price: 500,000</span></div>
+                    </div>
+                </div>
+
+                <!-- {{gameData.[2]}}
+            {{!-- {{#each gameData.[2] as stores}}
+                {{#each stores as store}}
+                  <h4>{{store.name}}</h4>
+                  {{#each store as item}}
+                    <p>{{item.name}}</p>
                   {{/each}}
-            {{/each}} --}}
+                {{/each}}
+          {{/each}} --}} -->
             </div>
         </div>
     </main>
