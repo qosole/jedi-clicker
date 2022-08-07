@@ -51,7 +51,7 @@ const itemData = [
 
     // Mercenaries (can only be bought once)
     {
-        // Gives a certain discount to all items in both stores
+        // No special effect, just powerful and cost efficient
         name: 'Kevin Hernandez',
         price: 200000,
         strength: 1500,
@@ -61,18 +61,18 @@ const itemData = [
         // No special effect, just powerful and cost efficient
         name: 'Vince Lee',
         price: 200000,
-        strength: 1750,
+        strength: 1500,
         store_id: 2,
     },
     {
-        // Converts you to the dark side, increasing strength by a certain amount
+        // No special effect, just powerful and cost efficient
         name: 'Manuel Nunez',
         price: 500000,
         strength: 3000,
         store_id: 2,
     },
     {
-        // Converts you to the dark side, increasing strength by a certain amount
+        // No special effect, just powerful and cost efficient
         name: 'Jerome Chenette',
         price: 500000,
         strength: 3000,

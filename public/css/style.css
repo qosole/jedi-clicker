@@ -100,17 +100,42 @@ h2 {
     box-sizing: border-box;
 }
 
+
+
 .mercenaries {
+    text-align: center;
     justify-content: center;
     align-items: center;
+}
+
+.mercenarylist1 {
+    display: flex;
     text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.mercenarylist2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.mercenarycard {
+    width: 48%;
+    border: 2px grey solid;
+    padding: 1%;
+    margin: 1%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .mercenary {
-    width: 45%;
-    border: 2px grey solid;
-    border-radius: 5px;
-    cursor: pointer;
+    width: 100%;
+    padding: 5%;
+    box-sizing: border-box;
 }
 
 /* Left Div Stylings */
