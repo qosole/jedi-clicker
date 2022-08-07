@@ -19,6 +19,10 @@ p {
     font-size: 18px;
 }
 
+h1 {
+    font-size: 34px;
+}
+
 h2 {
     font-size: 28px;
 }
@@ -94,7 +98,7 @@ h2 {
 
 .itemcard-light {
     width: 30%;
-    border: 3px skyblue solid;
+    border: 3px rgb(33, 131, 169) solid;
     padding: 1%;
     margin: 1%;
     box-sizing: border-box;
@@ -142,7 +146,7 @@ h2 {
 
 .mercenarycard-light {
     width: 48%;
-    border: 3px skyblue solid;
+    border: 3px rgb(33, 131, 169) solid;
     padding: 1%;
     margin: 1%;
     box-sizing: border-box;
@@ -188,8 +192,14 @@ h2 {
 }
 
 #upgradesBought {
-    display: flex;
     justify-content: center;
+    text-align: center;
+}
+
+.secondaryTitle {
+    justify-content: center;
+    text-align: center;
+    text-decoration: underline;
 }
 
 /* Center Div Stylings */
