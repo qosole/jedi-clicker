@@ -32,12 +32,6 @@ router.get('/light-homepage', withAuth, async (req, res) => {
             return;
         }
 
-        const allItemsList = await Item.findAll();
-        if (!allItemsList) {
-            res.status(404).json({ message: 'No item data found in db' });
-            return;
-        }
-
         // Creating an object that keeps track of each item and their count 
         let userItemCount = {};
         for (let i = 0; i < userData.dataValues.items.length; i++) {
@@ -70,12 +64,6 @@ router.get('/dark-homepage', withAuth, async (req, res) => {
         });
         if (!userData) {
             res.status(404).json({ message: 'No user found with that id' });
-            return;
-        }
-
-        const allItemsList = await Item.findAll();
-        if (!allItemsList) {
-            res.status(404).json({ message: 'No item data found in db' });
             return;
         }
 
