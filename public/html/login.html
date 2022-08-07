@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Jedi Clicker</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/Jedi-Clicker-Favicon.png">
+</head>
+
+<body>
+
+
+    <main>
+        <div id="loginpage">
+            <a href="./"><img class="loginlogo" src="../assets/images/Jedi-Clicker-Logo.png" /></a>
+            <div id="loginOrCreate">
+                <div id="loginDiv">
+                    <h2>Login</h2>
+                    <form id="loginForm" action="/login" method="post">
+                        <div class="container">
+                            <label for="username"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="username" required>
+    
+                            <label for="password"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="password" required>
+    
+                            <button type="submit" id="loginButton">Login</button>
+                        </div>
+                    </form>
+                </div>
+    
+                <div id="createDiv">
+                    <h2>Create Account</h2>
+                    <form id="createForm" action="/login" method="post">
+                        <div class="container">
+                            <label for="username"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="username" required>
+    
+                            <label for="password"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="password" required>
+    
+                            <label for="password-repeat"><b>Repeat Password</b></label>
+                            <input type="password" placeholder="Repeat Password" name="password-repeat" required>
+    
+                            <button type="submit" id="createButton">Create Account</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <a href="./"><button id="backHomeButton">BACK HOME</h1></button>
+        </div>
+    </main>
+
+    <footer>
+        <p>This game app was created as part of a Programming class project. No money was or will be made from this.
+            This is
+            made purely for educational purposes with no intention to infringe on any trademark or copyrighted material.
+        </p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<main>
+    <div id="loginpage">
+        <img class="loginlogo" src="../assets/images/Jedi-Clicker-Logo.png" />
+        <div id="loginOrCreate">
+            <div id="loginDiv">
+                <h2>Login</h2>
+                <form id="loginForm" action="/" method="post">
+                    <div class="container">
+                        <label for="username"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="username" required>
+
+                        <label for="password"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="password" required>
+
+                        <button type="submit" id="loginButton">Login</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="createDiv">
+                <h2>Create Account</h2>
+                <form id="createForm" action="/login" method="post">
+                    <div class="container">
+                        <label for="username"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="username" required>
+
+                        <label for="password"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="password" required>
+
+                        <label for="password-repeat"><b>Repeat Password</b></label>
+                        <input type="password" placeholder="Repeat Password" name="password-repeat" required>
+
+                        <button type="submit" id="createButton">Create Account</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
