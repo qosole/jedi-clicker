@@ -1,3 +1,5 @@
+// This file should be loaded BEFORE auto-click.js
+
 const enemy = document.querySelector('.enemy');
 const creditCount = document.querySelector('#credit-count');
 const itemsBought = document.querySelectorAll('.items-owned');
@@ -33,6 +35,9 @@ const strengthCalc = () => {
                 break;
             case 'Force Amplifier':
                 strength += 500;
+                break;
+            default:
+                strength += 0;
                 break;
         }
     }
