@@ -11,6 +11,10 @@ main {
     background-color: rgb(212, 186, 186)
 }
 
+.lightmain {
+    background-color: rgb(224, 227, 244);
+}
+
 p {
     font-size: 18px;
 }
@@ -90,7 +94,7 @@ h2 {
 
 .itemcard-light {
     width: 30%;
-    border: 2px grey solid;
+    border: 3px skyblue solid;
     padding: 1%;
     margin: 1%;
     box-sizing: border-box;
@@ -100,7 +104,7 @@ h2 {
 
 .itemcard-dark {
     width: 30%;
-    border: 2px maroon solid;
+    border: 3px maroon solid;
     padding: 1%;
     margin: 1%;
     box-sizing: border-box;
@@ -138,7 +142,7 @@ h2 {
 
 .mercenarycard-light {
     width: 48%;
-    border: 2px grey solid;
+    border: 3px skyblue solid;
     padding: 1%;
     margin: 1%;
     box-sizing: border-box;
@@ -148,7 +152,7 @@ h2 {
 
 .mercenarycard-dark {
     width: 48%;
-    border: 2px maroon solid;
+    border: 3px maroon solid;
     padding: 1%;
     margin: 1%;
     box-sizing: border-box;
@@ -175,7 +179,7 @@ h2 {
     height: 15vh;
     margin-bottom: 20px;
     text-align: center;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid grey;
 }
 
 .logo {
@@ -195,8 +199,8 @@ h2 {
     flex-direction: column;
     width: 33vw;
     align-content: center;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+    border-left: 2px solid grey;
+    border-right: 2px solid grey;
     cursor: url('../assets/images/Lightsaber-Cursor.png'), auto;
 }
 
@@ -204,7 +208,7 @@ h2 {
     height: 15vh;
     margin-bottom: 10%;
     text-align: center;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid grey;
 }
 
 .credits {
@@ -235,7 +239,7 @@ h2 {
     height: 15vh;
     margin-bottom: 20px;
     text-align: center;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid grey;
 }
 
 .storeTitle {
