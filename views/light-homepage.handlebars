@@ -5,13 +5,9 @@
         </div>
         <div id="upgradesBought">
           <h2 class="secondaryTitle">Items Bought</h2>
-          {{#each gameData}}
-          {{#each this}}
-            {{#each this}}
-              <p>{{name}}</p>
-            {{/each}}
-          {{/each}}
-        {{/each}} 
+            {{#each gameData.[1]}}
+                <p class="items-owned" data-count="{{this}}">{{@key}} x{{this}}</p>
+            {{/each}} 
         </div>
     </div>
 
