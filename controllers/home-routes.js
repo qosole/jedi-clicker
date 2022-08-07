@@ -1,12 +1,23 @@
 const router = require('express').Router();
 const { Item, Store, User, UserItem } = require('../models');
+const withAuth = require('../utils/auth'); // This helper function redirects the page to the login page when not logged in
 
-router.get('/', async (req, res) => {
+
+router.get('/login', async (req, res) => {
+    // Go to homepage if already logged in
+    if (req.session.logged_in) {
+        res.redirect('/');
+        return;
+    }
+    res.render('login');
+});
+
+router.get('/', withAuth, async (req, res) => {
     // Route for general homepage
     res.render('homepage');
 });
 
-router.get('/light-homepage', async (req, res) => {
+router.get('/light-homepage', withAuth, async (req, res) => {
     // Need to get items bought and credits from User model
     // Need to count the number of itmes the User has
 
@@ -47,7 +58,7 @@ router.get('/light-homepage', async (req, res) => {
     } catch (err) { res.status(500).json(err); }
 });
 
-router.get('/dark-homepage', async (req, res) => {
+router.get('/dark-homepage', withAuth, async (req, res) => {
     // Need to get items bought and credits from User model
     // Need to count the number of itmes the User has
 
