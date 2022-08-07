@@ -8,7 +8,7 @@ main {
 }
 
 .darkmain {
-    background-color: rgb(212, 186, 186)
+    background-color: rgb(211, 174, 174);
 }
 
 .lightmain {
@@ -25,6 +25,10 @@ h1 {
 
 h2 {
     font-size: 28px;
+}
+
+img {
+    -webkit-user-drag: none;
 }
 
 /* Homepage Stylings */
@@ -114,6 +118,11 @@ h2 {
     cursor: pointer;
 }
 
+.itemcard-light:hover {
+    opacity: .8;
+    border: 3px rgb(52, 180, 230) solid;
+}
+
 .itemcard-dark {
     width: 30%;
     border: 3px maroon solid;
@@ -122,6 +131,11 @@ h2 {
     box-sizing: border-box;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.itemcard-dark:hover {
+    opacity: .8;
+    border: 3px rgb(171, 0, 0) solid;
 }
 
 .item {
@@ -162,6 +176,10 @@ h2 {
     cursor: pointer;
 }
 
+.mercenarycard-light:hover {
+    opacity: .8;
+}
+
 .mercenarycard-dark {
     width: 48%;
     border: 3px maroon solid;
@@ -170,6 +188,11 @@ h2 {
     box-sizing: border-box;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.mercenarycard-dark:hover {
+    opacity: .8;
+    border: 3px rgb(171, 0, 0) solid;
 }
 
 .mercenary {
@@ -191,7 +214,7 @@ h2 {
     height: 15vh;
     margin-bottom: 20px;
     text-align: center;
-    border-bottom: 2px solid grey;
+    border-bottom: 3px solid grey;
 }
 
 .logo {
@@ -217,8 +240,8 @@ h2 {
     flex-direction: column;
     width: 33vw;
     align-content: center;
-    border-left: 2px solid grey;
-    border-right: 2px solid grey;
+    border-left: 3px solid grey;
+    border-right: 3px solid grey;
     cursor: url('../assets/images/Lightsaber-Cursor.png'), auto;
 }
 
@@ -226,7 +249,7 @@ h2 {
     height: 15vh;
     margin-bottom: 10%;
     text-align: center;
-    border-bottom: 2px solid grey;
+    border-bottom: 3px solid grey;
 }
 
 .credits {
@@ -242,11 +265,6 @@ h2 {
 
 .enemy {
     width: 80%;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
 }
 
 /* Enemy On Click Actions */
@@ -269,7 +287,7 @@ h2 {
     height: 15vh;
     margin-bottom: 20px;
     text-align: center;
-    border-bottom: 2px solid grey;
+    border-bottom: 3px solid grey;
 }
 
 .storeTitle {
@@ -296,6 +314,11 @@ footer {
 /* Responsive Screen Breaking points */
 
 @media only screen and (max-width: 900px) {
+
+    .homelogo {
+        width: 40%;
+    }
+
     main {
         flex-direction: column;
     }
