@@ -38,7 +38,7 @@ router.get('/:id', async (req, res) => {
 // Create a new user
 router.post('/', async (req, res) => {
     try {
-        // req.body should have username, password, and galactic_credits = 0
+        // req.body should have username and password
         const newUser = await User.create(req.body);
         if (!newUser) {
             res.status(400).json({ message: 'Syntax error with creating new user' });
