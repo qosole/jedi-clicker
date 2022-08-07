@@ -1,15 +1,5 @@
 const { Item } = require('../models');
 
-export const picture = SequelizeFile({
-    attribute: 'picture',
-    mimetype: /^image/,
-    crop: true,
-    sizes: {
-      small: 300, //width 300 for normal equipment items
-      big: 600, //width 600 for mercenary jedi's
-    }
- });
-
 const itemData = [
     // Equipment items
     {
