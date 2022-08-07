@@ -7,6 +7,10 @@ main {
     width: 100%;
 }
 
+.darkmain {
+    background-color: rgb(212, 186, 186)
+}
+
 p {
     font-size: 18px;
 }
@@ -84,9 +88,19 @@ h2 {
     width: 100%;
 }
 
-.itemcard {
+.itemcard-light {
     width: 30%;
     border: 2px grey solid;
+    padding: 1%;
+    margin: 1%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.itemcard-dark {
+    width: 30%;
+    border: 2px maroon solid;
     padding: 1%;
     margin: 1%;
     box-sizing: border-box;
@@ -122,9 +136,19 @@ h2 {
     width: 100%;
 }
 
-.mercenarycard {
+.mercenarycard-light {
     width: 48%;
     border: 2px grey solid;
+    padding: 1%;
+    margin: 1%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mercenarycard-dark {
+    width: 48%;
+    border: 2px maroon solid;
     padding: 1%;
     margin: 1%;
     box-sizing: border-box;
@@ -151,7 +175,7 @@ h2 {
     height: 15vh;
     margin-bottom: 20px;
     text-align: center;
-    border-bottom: 2px solid grey;
+    border-bottom: 2px solid black;
 }
 
 .logo {
@@ -180,7 +204,7 @@ h2 {
     height: 15vh;
     margin-bottom: 10%;
     text-align: center;
-    border-bottom: 2px solid grey;
+    border-bottom: 2px solid black;
 }
 
 .credits {
@@ -211,7 +235,7 @@ h2 {
     height: 15vh;
     margin-bottom: 20px;
     text-align: center;
-    border-bottom: 2px solid grey;
+    border-bottom: 2px solid black;
 }
 
 .storeTitle {
