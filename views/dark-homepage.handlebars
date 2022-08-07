@@ -1,82 +1,83 @@
-    <main class="darkmain">
-        <div id="left">
-            <div id="logo">
-                <img class="logo" src="/assets/images/Jedi-Clicker-Logo.png" />
-            </div>
-            <div id="upgradesBought">
-                <h2 class="secondaryTitle">Items Bought</h2>
-                {{gameData.[1]}}
-                {{!-- {{#each gameData.[1]}}
-                <p>
-                    {{@key}} x{{this}}
-                </p>
-                {{/each}} --}}
-            </div>
+<main class="darkmain">
+    <div id="left">
+        <div id="logo">
+            <img class="logo" src="/assets/images/Jedi-Clicker-Logo.png" />
         </div>
-
-        <div id="center">
-            <div id="credits">
-                <h1 class="credits">Credits: {{gameData.0.galactic_credits}}</h1>
-            </div>
-            <div id="enemy">
-                <img class="enemy" src="/assets/images/Light-Enemy.png" />
-            </div>
-        </div>
-
-        <div id="right">
-            <div id="storeTitle">
-                <h1 class="storeTitle">Store</h1>
-            </div>
-            <div id="upgrades">
-                <div class="items">
-                    <h2 class="secondaryTitle">Items</h2>
-                    <div class=itemlist1>
-                        <div class="itemcard-dark"><span class=cardTitle>Training Stick</span><img class="item"
-                                title="Training Stick" src="/assets/images/Item-Training-Stick-Dark.png" /><span
-                                class=itemAttributes><strong>+1 Strength</strong><br />Price: 25</span></div>
-                        <div class="itemcard-dark"><span class=cardTitle>Blaster Gun</span><img class="item"
-                                title="Blaster Gun" src="/assets/images/Item-Blaster-Gun-Dark.png" /><span
-                                class=itemAttributes><strong>+3 Strength</strong><br />Price: 100</span></div>
-                        <div class="itemcard-dark"><span class=cardTitle>Helper Droid</span><img class="item"
-                                title="Helper Droid" src="/assets/images/Item-Helper-Droid-Dark.png" /><span
-                                class=itemAttributes><strong>+6 Strength</strong><br />Price: 200</span></div>
-                    </div>
-                    <div class=itemlist2>
-                        <div class="itemcard-dark"><span class=cardTitle>Lightsaber</span><img class="item"
-                                title="Lightsaber" src="/assets/images/Item-Lightsaber-Dark.png" /><span
-                                class=itemAttributes><strong>+25 Strength</strong><br />Price: 500</span></div>
-                        <div class="itemcard-dark"><span class=cardTitle>Double Lightsaber</span><img class="item"
-                                title="Double Sided Lightsaber"
-                                src="/assets/images/Item-Double-Sided-Lightsaber-Dark.png" /><span
-                                class=itemAttributes><strong>+50 Strength</strong><br />Price: 1000</span></div>
-                        <div class="itemcard-dark"><span class=cardTitle>Force Amplifier</span><img class="item"
-                                title="Force Amplifier" src="/assets/images/Item-Force-Amplifier-Dark.png" /><span
-                                class=itemAttributes><strong>+500 Strength</strong><br />Price: 5000</span></div>
-                    </div>
-                </div>
-
-                <div class="mercenaries">
-                    <h2 class="secondaryTitle">Mercenaries</h2>
-                    <p>You can only choose one!</p>
-                    <div class=mercenarylist1>
-                        <div class="mercenarycard-dark"><span class=cardTitle>Sith Lord Kevin</span><img class="mercenary" title="Sith Lord Kevin" src="/assets/images/Item-Jedi-Kevin-Dark.png" /><span class=itemAttributes><strong>+1,500 Strength</strong><br />Price: 200,000</span></div>
-                        <div class="mercenarycard-dark"><span class=cardTitle>Sith Lord Vince</span><img class="mercenary" title="Sith Lord Vince" src="/assets/images/Item-Jedi-Vince-Dark.png" /><span class=itemAttributes><strong>+1,500 Strength</strong><br />Price: 200,000</span></div>
-                    </div>
-                    <div class=mercenarylist2>
-                        <div class="mercenarycard-dark"><span class=cardTitle>Sith Lord Manuel</span><img class="mercenary" title="Sith Lord Manuel" src="/assets/images/Item-Jedi-Manuel-Dark.png" /><span class=itemAttributes><strong>+3,000 Strength</strong><br />Price: 500,000</span></div>
-                        <div class="mercenarycard-dark"><span class=cardTitle>Sith Lord Jerome</span><img class="mercenary" title="Sith Lord Jerome" src="/assets/images/Item-Jedi-Jerome-Dark.png" /><span class=itemAttributes><strong>+3,000 Strength</strong><br />Price: 500,000</span></div>
-                    </div>
-                </div>
-
-                <!-- {{gameData.[2]}}
-            {{!-- {{#each gameData.[2] as stores}}
-                {{#each stores as store}}
-                  <h4>{{store.name}}</h4>
-                  {{#each store as item}}
-                    <p>{{item.name}}</p>
+        <div id="upgradesBought">
+            <h2 class="secondaryTitle">Items Bought</h2>
+            <!-- {{#each gameData}}
+                {{#each this}}
+                  {{#each this}}
+                    <p>{{name}}</p>
                   {{/each}}
                 {{/each}}
-          {{/each}} --}} -->
-            </div>
+              {{/each}} -->
         </div>
-    </main>
+    </div>
+
+    <div id="center">
+        <div id="credits">
+            <h1 class="credits">Credits: {{gameData.0.galactic_credits}}</h1>
+        </div>
+        <div id="enemy">
+            <img class="enemy" src="/assets/images/Light-Enemy.png" />
+        </div>
+    </div>
+
+    <div id="right">
+        <div id="storeTitle">
+            <h1 class="storeTitle">Store</h1>
+        </div>
+        <div id="upgrades">
+            <div class="items">
+                <h2 class="secondaryTitle">Items</h2>
+                <div class=itemlist1>
+                    <div class="itemcard-dark"><span class=cardTitle>Training Stick</span><img class="item"
+                            title="Training Stick" src="/assets/images/Item-Training-Stick-Dark.png" /><span
+                            class=itemAttributes><strong>+1 Strength</strong><br />Price: 25</span></div>
+                    <div class="itemcard-dark"><span class=cardTitle>Blaster Gun</span><img class="item"
+                            title="Blaster Gun" src="/assets/images/Item-Blaster-Gun-Dark.png" /><span
+                            class=itemAttributes><strong>+3 Strength</strong><br />Price: 100</span></div>
+                    <div class="itemcard-dark"><span class=cardTitle>Helper Droid</span><img class="item"
+                            title="Helper Droid" src="/assets/images/Item-Helper-Droid-Dark.png" /><span
+                            class=itemAttributes><strong>+6 Strength</strong><br />Price: 200</span></div>
+                </div>
+                <div class=itemlist2>
+                    <div class="itemcard-dark"><span class=cardTitle>Lightsaber</span><img class="item"
+                            title="Lightsaber" src="/assets/images/Item-Lightsaber-Dark.png" /><span
+                            class=itemAttributes><strong>+25 Strength</strong><br />Price: 500</span></div>
+                    <div class="itemcard-dark"><span class=cardTitle>Double Lightsaber</span><img class="item"
+                            title="Double Sided Lightsaber"
+                            src="/assets/images/Item-Double-Sided-Lightsaber-Dark.png" /><span
+                            class=itemAttributes><strong>+50 Strength</strong><br />Price: 1000</span></div>
+                    <div class="itemcard-dark"><span class=cardTitle>Force Amplifier</span><img class="item"
+                            title="Force Amplifier" src="/assets/images/Item-Force-Amplifier-Dark.png" /><span
+                            class=itemAttributes><strong>+500 Strength</strong><br />Price: 5000</span></div>
+                </div>
+            </div>
+
+            <div class="mercenaries">
+                <h2 class="secondaryTitle">Mercenaries</h2>
+                <p>You can only choose one!</p>
+                <div class=mercenarylist1>
+                    <div class="mercenarycard-dark"><span class=cardTitle>Sith Lord Kevin</span><img class="mercenary" title="Sith Lord Kevin" src="/assets/images/Item-Jedi-Kevin-Dark.png" /><span class=itemAttributes><strong>+1,500 Strength</strong><br />Price: 200,000</span></div>
+                    <div class="mercenarycard-dark"><span class=cardTitle>Sith Lord Vince</span><img class="mercenary" title="Sith Lord Vince" src="/assets/images/Item-Jedi-Vince-Dark.png" /><span class=itemAttributes><strong>+1,500 Strength</strong><br />Price: 200,000</span></div>
+                </div>
+                <div class=mercenarylist2>
+                    <div class="mercenarycard-dark"><span class=cardTitle>Sith Lord Manuel</span><img class="mercenary" title="Sith Lord Manuel" src="/assets/images/Item-Jedi-Manuel-Dark.png" /><span class=itemAttributes><strong>+3,000 Strength</strong><br />Price: 500,000</span></div>
+                    <div class="mercenarycard-dark"><span class=cardTitle>Sith Lord Jerome</span><img class="mercenary" title="Sith Lord Jerome" src="/assets/images/Item-Jedi-Jerome-Dark.png" /><span class=itemAttributes><strong>+3,000 Strength</strong><br />Price: 500,000</span></div>
+                </div>
+            </div>
+
+            <!-- {{#each gameData}}
+            {{#each this}}
+              {{#each this}}
+                {{#each this}}
+              <p>{{name}}</p> <br>
+                {{/each}}
+              {{/each}}
+            {{/each}}
+          {{/each}} -->
+        </div>
+    </div>
+</main>
