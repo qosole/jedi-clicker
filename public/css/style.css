@@ -7,8 +7,167 @@ main {
     width: 100%;
 }
 
+.darkmain {
+    background-color: rgb(212, 186, 186)
+}
+
+.lightmain {
+    background-color: rgb(224, 227, 244);
+}
+
+p {
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 34px;
+}
+
 h2 {
     font-size: 28px;
+}
+
+/* Homepage Stylings */
+
+#homepage {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.homelogo {
+    width: 15%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+/* Rebellion and Empire Logo Stylings */
+
+#chooseGame {
+    text-align: center;
+}
+
+.rebellion {
+    width: 35%;
+    padding: 2%;
+    box-sizing: border-box;
+    cursor: url('../assets/images/Rebels-Cursor.png'), auto;
+}
+
+.empire {
+    width: 35%;
+    padding: 2%;
+    box-sizing: border-box;
+    cursor: url('../assets/images/Empire-Cursor.png'), auto;
+}
+
+/* Item Stylings */
+
+.cardTitle {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.itemAttributes {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.items {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemlist1 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.itemlist2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.itemcard-light {
+    width: 30%;
+    border: 3px rgb(33, 131, 169) solid;
+    padding: 1%;
+    margin: 1%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.itemcard-dark {
+    width: 30%;
+    border: 3px maroon solid;
+    padding: 1%;
+    margin: 1%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item {
+    width: 100%;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+
+
+.mercenaries {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.mercenarylist1 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.mercenarylist2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.mercenarycard-light {
+    width: 48%;
+    border: 3px rgb(33, 131, 169) solid;
+    padding: 1%;
+    margin: 1%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mercenarycard-dark {
+    width: 48%;
+    border: 3px maroon solid;
+    padding: 1%;
+    margin: 1%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mercenary {
+    width: 100%;
+    padding: 5%;
+    box-sizing: border-box;
 }
 
 /* Left Div Stylings */
@@ -33,8 +192,14 @@ h2 {
 }
 
 #upgradesBought {
-    display: flex;
     justify-content: center;
+    text-align: center;
+}
+
+.secondaryTitle {
+    justify-content: center;
+    text-align: center;
+    text-decoration: underline;
 }
 
 /* Center Div Stylings */
@@ -44,8 +209,9 @@ h2 {
     flex-direction: column;
     width: 33vw;
     align-content: center;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+    border-left: 2px solid grey;
+    border-right: 2px solid grey;
+    cursor: url('../assets/images/Lightsaber-Cursor.png'), auto;
 }
 
 #credits {
@@ -76,7 +242,7 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 33vw;
-    height: 100vh;
+    height: auto;
 }
 
 #storeTitle {
@@ -93,7 +259,7 @@ h2 {
 
 #upgrades {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 /* Footer Stylings */
@@ -113,16 +279,21 @@ footer {
     main {
         flex-direction: column;
     }
+
     #left {
         width: 95vw;
         height: auto;
     }
+
     #center {
         width: 95vw;
         height: auto;
         padding-top: 2%;
         padding-bottom: 2%;
+        border-left: none;
+        border-right: none;
     }
+
     #right {
         width: 95vw;
         height: auto;

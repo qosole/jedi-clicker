@@ -2,8 +2,18 @@ const router = require('express').Router();
 const { Item, Store, User, UserItem } = require('../models');
 
 router.get('/', async (req, res) => {
-    // Placeholder route
+    // Placeholder route for general homepage
     res.render('homepage');
+});
+
+router.get('/light-homepage', async (req, res) => {
+    // Placeholder route for light-homepage
+    res.render('light-homepage');
+});
+
+router.get('/dark-homepage', async (req, res) => {
+    // Placeholder route for dark-homepage
+    res.render('dark-homepage');
 });
 
 router.get('/:id', async (req, res) => {
