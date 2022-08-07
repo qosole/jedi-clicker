@@ -33,13 +33,13 @@ const itemData = [
     {
         name: 'Lightsaber',
         price: 500,
-        strength: 10,
+        strength: 25,
         store_id: 1,
     },
     {
         name: 'Double-Sided Lightsaber',
         price: 1000,
-        strength: 120,
+        strength: 50,
         store_id: 1,
     },
     {

@@ -7,6 +7,10 @@ main {
     width: 100%;
 }
 
+p {
+    font-size: 18px;
+}
+
 h2 {
     font-size: 28px;
 }
@@ -38,14 +42,75 @@ h2 {
     width: 35%;
     padding: 2%;
     box-sizing: border-box;
-    cursor: url('../assets/images/Rebels-Cursor.png'),auto;
+    cursor: url('../assets/images/Rebels-Cursor.png'), auto;
 }
 
 .empire {
     width: 35%;
     padding: 2%;
     box-sizing: border-box;
-    cursor: url('../assets/images/Empire-Cursor.png'),auto;
+    cursor: url('../assets/images/Empire-Cursor.png'), auto;
+}
+
+/* Item Stylings */
+
+.cardTitle {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.itemAttributes {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.items {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemlist1 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.itemlist2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.itemcard {
+    width: 30%;
+    border: 2px grey solid;
+    padding: 1%;
+    margin: 1%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item {
+    width: 100%;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+.mercenaries {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mercenary {
+    width: 45%;
+    border: 2px grey solid;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Left Div Stylings */
@@ -83,7 +148,7 @@ h2 {
     align-content: center;
     border-left: 2px solid black;
     border-right: 2px solid black;
-    cursor: url('../assets/images/Lightsaber-Cursor.png'),auto;
+    cursor: url('../assets/images/Lightsaber-Cursor.png'), auto;
 }
 
 #credits {
@@ -114,7 +179,7 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 33vw;
-    height: 100vh;
+    height: auto;
 }
 
 #storeTitle {
@@ -131,7 +196,7 @@ h2 {
 
 #upgrades {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 /* Footer Stylings */
@@ -151,10 +216,12 @@ footer {
     main {
         flex-direction: column;
     }
+
     #left {
         width: 95vw;
         height: auto;
     }
+
     #center {
         width: 95vw;
         height: auto;
@@ -163,6 +230,7 @@ footer {
         border-left: none;
         border-right: none;
     }
+
     #right {
         width: 95vw;
         height: auto;
