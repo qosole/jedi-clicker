@@ -28,7 +28,8 @@ User.init(
     },
     galactic_credits: {
       type: DataTypes.BIGINT,
-      allowNull: false
+      allowNull: false,
+      defaultValue: 0
     }
   },
   {

@@ -4,7 +4,7 @@
         <div id="loginOrCreate">
             <div id="loginDiv">
                 <h2>Login</h2>
-                <form id="loginForm" action="/login" method="post">
+                <form id="loginForm" action="/api/users/login" method="post">
                     <div class="container">
                         <label for="username"><b>Username</b></label>
                         <input type="text" placeholder="Enter Username" name="username" required>
@@ -19,7 +19,7 @@
 
             <div id="createDiv">
                 <h2>Create Account</h2>
-                <form id="createForm" action="/login" method="post">
+                <form id="createForm" action="/api/users" method="post">
                     <div class="container">
                         <label for="username"><b>Username</b></label>
                         <input type="text" placeholder="Enter Username" name="username" required>
@@ -38,3 +38,5 @@
         <a href="./"><button id="backHomeButton">BACK HOME</h1></button>
     </div>
 </main>
+
+<script src="/js/login.js"></script>
