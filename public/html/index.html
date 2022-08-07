@@ -1,67 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link rel="stylesheet" href="../css/style.css" />
-    <title>Jedi Clicker</title>
-    <link rel="icon" type="image/x-icon" href="../assets/images/Jedi-Clicker-Favicon.png">
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>Jedi Clicker</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/Jedi-Clicker-Favicon.png">
+</head>
+
+<body>
 
 
-    <main>
-      <div id="left">
-          <div id="logo">
-            <img class="logo" src="../assets/images/Jedi-Clicker-Logo.png" />
-          </div>
-          <div id="upgradesBought">
-            {{gameData.[1]}}
-          {{!-- {{#each gameData.[1]}}
-              <p>
-                {{@key}} x{{this}}
-              </p>
-          {{/each}} --}}
-          </div>
-      </div>
-
-      <div id="center">
-          <div id="chooseGame">
-            <h1>There are no sidelines.
-              <br/>
-              You must choose a side!</h1>
-            &nbsp;
-            <div>
-              <img class="rebellion" src="../assets/images/The-Rebellion-Logo.png" />
-              <img class="empire" src="../assets/images/The-Empire-Logo.png" />
-            </div>
-          </div>
-      </div>
-
-      <div id="right">
-          <div id="storeTitle">
-            <h2 class="storeTitle">Store</h2>
-          </div>
-          <div id="upgrades">
-            {{gameData.[2]}}
-            {{!-- {{#each gameData.[2] as stores}}
-                {{#each stores as store}}
-                  <h4>{{store.name}}</h4>
-                  {{#each store as item}}
-                    <p>{{item.name}}</p>
-                  {{/each}}
-                {{/each}}
-          {{/each}} --}}
-          </div>
+  <main>
+    <div id="homepage">
+      <img class="homelogo" src="../assets/images/Jedi-Clicker-Logo.png" />
+      <div id="chooseGame">
+        <h1>There are no sidelines.
+          <br />
+          You must choose a side!
+        </h1>
+        &nbsp;
+        <div>
+          <a href="/light-homepage"><img class="rebellion" src="../assets/images/The-Rebellion-Logo.png" /></a>
+          <a href="/dark-homepage"><img class="empire" src="../assets/images/The-Empire-Logo.png" /></a>
+        </div>
       </div>
   </main>
 
-    <footer>
-        <p>This game app was created as part of a Programming class project. No money was or will be made from this. This is made purely for educational purposes with no intention to infringe on any trademark or copyrighted material.</p>
-    </footer>
+  <footer>
+    <p>This game app was created as part of a Programming class project. No money was or will be made from this. This is
+      made purely for educational purposes with no intention to infringe on any trademark or copyrighted material.</p>
+  </footer>
 
-    <script src="../js/script.js"></script>
-  </body>
+  <script src="../js/script.js"></script>
+</body>
+
 </html>

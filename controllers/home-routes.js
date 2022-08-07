@@ -6,6 +6,16 @@ router.get('/', async (req, res) => {
     res.render('homepage');
 });
 
+router.get('/light-homepage', async (req, res) => {
+    // Placeholder route
+    res.render('light-homepage');
+});
+
+router.get('/dark-homepage', async (req, res) => {
+    // Placeholder route
+    res.render('dark-homepage');
+});
+
 router.get('/:id', async (req, res) => {
     // Need to get items bought and credits from User model
     // Need to get store information from Store model
