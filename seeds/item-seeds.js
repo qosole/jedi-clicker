@@ -1,6 +1,4 @@
 const { Item } = require('../models');
-import SequelizeFile from 'sequelize-file';
-import { picture } from '../public/assets/images';
 
 export const picture = SequelizeFile({
     attribute: 'picture',
@@ -19,60 +17,52 @@ const itemData = [
         price: 25,
         strength: 1,
         store_id: 1,
-        picture: "/Item-Training-Stick-Light.png",
     },
     {
         name: 'Blaster Gun',
         price: 100,
         strength: 3,
         store_id: 1,
-        picture: "/Item-Blaster-Gun-Light.png",
     },
     {
         name: 'Helper Droid',
         price: 200,
         strength: 6,
         store_id: 1,
-        picture: "/Item-Helper-Droid-Light.html",
     },
     {
         name: 'Lightsaber',
         price: 500,
         strength: 10,
         store_id: 1,
-        picture: "/Item-Lightsaber-Light.png",
     },
     {
         name: 'Double-Sided Lightsaber',
         price: 1000,
         strength: 120,
         store_id: 1,
-        picture: "/Item-Double-Sided-Lightsaver-Light.png",
     },
     {
         name: 'Force Amplifier',
         price: 5000,
         strength: 500,
         store_id: 1,
-        picture: "/Item-Force-Amplifier-Light.png",
     },
 
     // Mercenaries (can only be bought once)
     {
         // Gives a certain discount to all items in both stores
-        name: 'Vince Lee',
+        name: 'Kevin Hernandez',
         price: 200000,
         strength: 1500,
         store_id: 2,
-        picture: "/Item-Jedi-Vince-Light.png",
     },
     {
         // No special effect, just powerful and cost efficient
-        name: 'Kevin Hernandez',
+        name: 'Vince Lee',
         price: 200000,
         strength: 1750,
         store_id: 2,
-        picture: "/Item-Jedi-Kevin-Light.png",
     },
     {
         // Converts you to the dark side, increasing strength by a certain amount
@@ -80,7 +70,6 @@ const itemData = [
         price: 500000,
         strength: 3000,
         store_id: 2,
-        picture: "/Item-Jedi-Manuel-Light.png",
     },
     {
         // Converts you to the dark side, increasing strength by a certain amount
@@ -88,7 +77,6 @@ const itemData = [
         price: 500000,
         strength: 3000,
         store_id: 2,
-        picture: "/Item-Jedi-Jerome-Light.png",
     }
 ];
 
