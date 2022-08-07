@@ -12,7 +12,7 @@ router.get('/light-homepage', async (req, res) => {
 
     try {
 
-        const userData = await User.findByPk(req.params.id, {
+        const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
             include: [{ model: Item }]
         });
@@ -32,7 +32,7 @@ router.get('/light-homepage', async (req, res) => {
         for (let i = 0; i < userData.dataValues.items.length; i++) {
             let count = await UserItem.count({
                 where: {
-                    user_id: req.params.id,
+                    user_id: req.session.user_id,
                     item_id: userData.dataValues.items[i].dataValues.id
                 }
             });
@@ -53,7 +53,7 @@ router.get('/dark-homepage', async (req, res) => {
 
     try {
 
-        const userData = await User.findByPk(req.params.id, {
+        const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
             include: [{ model: Item }]
         });
@@ -73,7 +73,7 @@ router.get('/dark-homepage', async (req, res) => {
         for (let i = 0; i < userData.dataValues.items.length; i++) {
             let count = await UserItem.count({
                 where: {
-                    user_id: req.params.id,
+                    user_id: req.session.user_id,
                     item_id: userData.dataValues.items[i].dataValues.id
                 }
             });
