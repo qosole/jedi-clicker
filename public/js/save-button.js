@@ -16,6 +16,7 @@ const getItemId = async (itemName) => {
 
 // Saving the game when the save button is clicked (in dark-homepage or light-homepage)
 document.querySelector('#save-button').addEventListener('click', async () => {
+    // Saving credits
     const creditDataToSave = { 'galactic_credits': parseInt(creditCount.textContent) };
     await fetch('/api/users', {
         method: 'PUT',
@@ -23,6 +24,7 @@ document.querySelector('#save-button').addEventListener('click', async () => {
         body: JSON.stringify(creditDataToSave)
     });
 
+    // Saving items
     let itemDataToSave = [];
     for (let i in itemsBought) {
         // Data validation
@@ -44,7 +46,10 @@ document.querySelector('#save-button').addEventListener('click', async () => {
             }
         }
         if (!isDupe) {
-            itemDataToSave.push({ 'item_id': await getItemId(itemsBought[i].dataset.name) });
+            itemDataToSave.push({ 
+                'item_id': await getItemId(itemsBought[i].dataset.name),
+                'quantity': itemsBought[i].dataset.count 
+            });
         }
     }
 

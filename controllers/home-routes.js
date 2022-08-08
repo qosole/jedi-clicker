@@ -35,13 +35,13 @@ router.get('/light-homepage', withAuth, async (req, res) => {
         // Creating an object that keeps track of each item and their count 
         let userItemCount = {};
         for (let i = 0; i < userData.dataValues.items.length; i++) {
-            let count = await UserItem.count({
+            let count = await UserItem.findOne({
                 where: {
                     user_id: req.session.user_id,
                     item_id: userData.dataValues.items[i].dataValues.id
                 }
             });
-            userItemCount[userData.dataValues.items[i].dataValues.name] = count;
+            userItemCount[userData.dataValues.items[i].dataValues.name] = count.dataValues.quantity;
         }
 
         // Combining the queries
@@ -70,13 +70,13 @@ router.get('/dark-homepage', withAuth, async (req, res) => {
         // Creating an object that keeps track of each item and their count 
         let userItemCount = {};
         for (let i = 0; i < userData.dataValues.items.length; i++) {
-            let count = await UserItem.count({
+            let count = await UserItem.findOne({
                 where: {
                     user_id: req.session.user_id,
                     item_id: userData.dataValues.items[i].dataValues.id
                 }
             });
-            userItemCount[userData.dataValues.items[i].dataValues.name] = count;
+            userItemCount[userData.dataValues.items[i].dataValues.name] = count.dataValues.quantity;
         }
 
         // Combining the queries

@@ -26,6 +26,11 @@ UserItem.init(
                 model: 'item',
                 key: 'id'
             }
+        },
+        quantity: {
+            type: DataTypes.BIGINT,
+            allowNull: false,
+            defaultValue: 1
         }
     },
     {
