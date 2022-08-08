@@ -9,7 +9,7 @@ const itemsBought = document.querySelectorAll('.items-owned');
 // The base strength of the player is 1. 
 // The items that a player has will increase their strength.
 // The function will return an integer (total strength).
-const strengthCalc = () => {
+var strengthCalc = () => {
     let strength = 1;
     // Calculating the total strength of the player's items
     for (let i in itemsBought) {

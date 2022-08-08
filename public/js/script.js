@@ -6,8 +6,6 @@ const galacticCredits = document.querySelector('#credit-count');
 let boughtItems = [];
 
 
-
-
 // Dark Items
 
 const darkItemsClick = (event, i) => {
@@ -16,9 +14,9 @@ const darkItemsClick = (event, i) => {
             case 0: 
             if (galacticCredits.textContent >= 25) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 25;
-            strengthCalc.textContent + 3;
-            console.log('Training Stick');
-            
+            currentStrength = strengthCalc() + 3;
+            strengthCalc() = currentStrength;
+            console.log(currentStrength);
             }
             break;
 
