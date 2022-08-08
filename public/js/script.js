@@ -190,6 +190,30 @@ const lightItemsClick = (event, i) => {
             break;
 
     }
+
+    // Adding item to Items Bought; if already exists, increment count
+    let isOwned = false;
+    for (let j in itemsBought) {
+        // Data verification
+        if (itemsBought[j].textContent == undefined) {
+            continue;
+        }
+
+        if (itemsBought[j].dataset.name == itemName) {
+            itemsBought[j].dataset.count++;
+            itemsBought[j].textContent = itemsBought[j].dataset.name + ' x' + itemsBought[j].dataset.count;
+            isOwned = true;
+            break;
+        }
+    }
+    if (!isOwned && itemName != '') {
+        const newItemTag = document.createElement('p');
+        newItemTag.classList.add('items-owned');
+        newItemTag.setAttribute('data-name', itemName);
+        newItemTag.setAttribute('data-count', 1);
+        newItemTag.textContent = itemName + ' x1';
+        document.querySelector('#upgradesBought').appendChild(newItemTag);
+    }
 }
 
 for (let i = 0; i < lightItemButtons.length; i++) {
