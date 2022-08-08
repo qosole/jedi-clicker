@@ -92,11 +92,11 @@ router.post('/logout', (req, res) => {
     }
 });
 
-// Update a user's galactic_credit by id
-router.put('/:id', async (req, res) => {
+// Update a user's galactic_credit by session id
+router.put('/', async (req, res) => {
     try {
         // req.body should have galactic_credits
-        const user = await User.findByPk(req.params.id);
+        const user = await User.findByPk(req.session.user_id);
         if (!user) {
             res.status(404).json({ message: 'No user found with that id' });
             return;
@@ -105,18 +105,28 @@ router.put('/:id', async (req, res) => {
         user.galactic_credits = req.body.galactic_credits;
         await user.save();
 
+        res.status(200).end();
+
     } catch (err) { res.status(500).json(err); }
 });
 
-// Update a user's items by id
-router.put('/items/:id', async (req, res) => {
+// Update a user's items by session id
+router.put('/items/', async (req, res) => {
     try {
         // req.body should have item_id
         const newUserItemData = {
-            user_id: req.params.id,
+            user_id: req.session.user_id,
             item_id: req.body.item_id
         };
+
         const userItem = await UserItem.create(newUserItemData);
+        if (!userItem) {
+            res.status(400).json({ message: 'Syntax error in updating items' });
+            return;
+        }
+
+        res.status(200).end();
+
     } catch (err) { res.status(500).json(err); }
 })
 
