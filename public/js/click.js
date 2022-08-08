@@ -1,5 +1,3 @@
-// This file should be loaded BEFORE auto-click.js
-
 const enemy = document.querySelector('.enemy');
 const creditCount = document.querySelector('#credit-count');
 // The player's items bought should update as fast as possible to allow for responsive gameplay
