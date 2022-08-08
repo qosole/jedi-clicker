@@ -7,10 +7,6 @@ setInterval(() => {
     itemsBought = document.querySelectorAll('.items-owned');
 }, 10);
 
-// Need to remember which items the user already had so they do not get resaved and duplicated
-const originalItems = document.querySelectorAll('.items-owned');
-
-
 // This function calculates the total strength of the player.
 // The base strength of the player is 1. 
 // The items that a player has will increase their strength.
