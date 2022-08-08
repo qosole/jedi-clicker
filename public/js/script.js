@@ -194,12 +194,14 @@ for (let i = 0; i < darkMercenaryButtons.length; i++) {
 // Light Items
 
 const lightItemsClick = (event, i) => {
+    let itemName = '';
     event.preventDefault();
     switch (i) {
             case 0: 
             if (galacticCredits.textContent >= 25) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 25;
             console.log('Training Stick');
+            itemName = 'Training Stick';
             }
             break;
 
@@ -207,6 +209,7 @@ const lightItemsClick = (event, i) => {
             if (galacticCredits.textContent >= 100) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 100;
             console.log('Blaster Gun');
+            itemName = 'Blaster Gun';
             }
             break;
 
@@ -214,6 +217,7 @@ const lightItemsClick = (event, i) => {
             if (galacticCredits.textContent >= 200) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 200;
             console.log('Helper Droid');
+            itemName = 'Helper Droid';
             }
             break;
 
@@ -221,6 +225,7 @@ const lightItemsClick = (event, i) => {
             if (galacticCredits.textContent >= 500) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 500;
             console.log('Lightsaber');
+            itemName = 'Lightsaber';
             }
             break;
 
@@ -228,6 +233,7 @@ const lightItemsClick = (event, i) => {
             if (galacticCredits.textContent >= 1000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 1000;
             console.log('Double Lightsaber');
+            itemName = 'Double-sided Lightsaber';
             }
             break;
 
@@ -235,6 +241,7 @@ const lightItemsClick = (event, i) => {
             if (galacticCredits.textContent >= 5000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 5000;
             console.log('Force Amplifier');
+            itemName = 'Force Amplifier';
             }
             break;
 
@@ -276,12 +283,14 @@ for (let i = 0; i < lightItemButtons.length; i++) {
 // Light Mercenaries
 
 const lightMercenaryClick = (event, i) => {
+    let itemName = '';
     event.preventDefault();
     switch (i) {
             case 0: 
             if (galacticCredits.textContent >= 200000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 200000;
             console.log('Kevin');
+            itemName = 'Kevin Hernandez';
             }
             break;
 
@@ -289,6 +298,7 @@ const lightMercenaryClick = (event, i) => {
             if (galacticCredits.textContent >= 200000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 200000;
             console.log('Vince');
+            itemName = 'Vince Lee';
             }
             break;
 
@@ -296,6 +306,7 @@ const lightMercenaryClick = (event, i) => {
             if (galacticCredits.textContent >= 500000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 500000;
             console.log('Manuel');
+            itemName = 'Manuel Nunez';
             }
             break;
 
@@ -303,6 +314,7 @@ const lightMercenaryClick = (event, i) => {
             if (galacticCredits.textContent >= 500000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 500000;
             console.log('Jerome');
+            itemName = 'Jerome Chenette';
             }
             break;
 
@@ -310,6 +322,53 @@ const lightMercenaryClick = (event, i) => {
             console.log('hi');
             break;
 
+    }
+
+    // Checking to see if mercenary is already owned
+    let isOwned = false;
+    let mercToRefund = '';
+    for (let j in itemsBought) {
+        // Data verification
+        if (itemsBought[j].textContent == undefined) {
+            continue;
+        }
+
+        if (itemsBought[j].dataset.name == itemName) {
+            isOwned = true;
+            mercToRefund = itemName;
+            break;
+        }
+    }
+
+    // Refunding the mercenary if already owned
+    if (isOwned) {
+        switch (mercToRefund) {
+            case 'Kevin Hernandez':
+                galacticCredits.textContent = parseInt(galacticCredits.textContent) + 200000;
+                break;
+            case 'Vince Lee':
+                galacticCredits.textContent = parseInt(galacticCredits.textContent) + 200000;
+                break;
+            case 'Manuel Nunez':
+                galacticCredits.textContent = parseInt(galacticCredits.textContent) + 500000;
+                break;
+            case 'Jerome Chenette':
+                galacticCredits.textContent = parseInt(galacticCredits.textContent) + 500000;
+                break;
+            default:
+                galacticCredits.textContent = parseInt(galacticCredits.textContent);
+                break;
+        }
+    }
+
+    // Adding mercenary to list of items if not already owned
+    if (!isOwned && itemName != '') {
+        const newItemTag = document.createElement('p');
+        newItemTag.classList.add('items-owned');
+        newItemTag.setAttribute('data-name', itemName);
+        newItemTag.setAttribute('data-count', 1);
+        newItemTag.textContent = itemName + ' x1';
+        document.querySelector('#upgradesBought').appendChild(newItemTag);
     }
 }
 

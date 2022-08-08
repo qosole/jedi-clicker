@@ -37,10 +37,10 @@ document.querySelector('#save-button').addEventListener('click', async () => {
                 continue;
             }
 
-            if (itemsBought[i].dataset.name == originalItems[j].dataset.name) {
-                isDupe = true;
-                break;
-            }
+            // if (itemsBought[i].dataset.name == originalItems[j].dataset.name) {
+            //     isDupe = true;
+            //     break;
+            // }
         }
         if (!isDupe) {
             itemDataToSave.push({ 'item_id': await getItemId(itemsBought[i].dataset.name) });
