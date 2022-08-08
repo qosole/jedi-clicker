@@ -55,5 +55,9 @@ document.querySelector('#save-button').addEventListener('click', async () => {
             body: JSON.stringify(itemDataToSave[i])
         });
     }
-    return null;
+    
+    // Notifing the player that the game was saved
+    const savedAlert = document.querySelector('#saved-alert');
+    savedAlert.style.display = 'block';
+    setTimeout(() => savedAlert.style.display = 'none', 2000);
 });
