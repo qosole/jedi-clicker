@@ -14,6 +14,7 @@ const darkItemsClick = (event, i) => {
             if (galacticCredits.textContent >= 25) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 25;
             console.log('Training Stick');
+            
             }
             break;
 
