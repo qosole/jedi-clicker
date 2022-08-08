@@ -97,11 +97,14 @@ for (let i = 0; i < darkItemButtons.length; i++) {
 
 const darkMercenaryClick = (event, i) => {
     event.preventDefault();
+    let itemName = '';
+
     switch (i) {
             case 0: 
             if (galacticCredits.textContent >= 200000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 200000;
             console.log('Kevin');
+            itemName = 'Kevin Hernandez';
             }
             break;
 
@@ -109,6 +112,7 @@ const darkMercenaryClick = (event, i) => {
             if (galacticCredits.textContent >= 200000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 200000;
             console.log('Vince');
+            itemName = 'Vince Lee';
             }
             break;
 
@@ -116,6 +120,7 @@ const darkMercenaryClick = (event, i) => {
             if (galacticCredits.textContent >= 500000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 500000;
             console.log('Manuel');
+            itemName = 'Manuel Nunez';
             }
             break;
 
@@ -123,6 +128,7 @@ const darkMercenaryClick = (event, i) => {
             if (galacticCredits.textContent >= 200000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 500000;
             console.log('Jerome');
+            itemName = 'Jerome Chenette';
             }
             break;
 
@@ -130,6 +136,53 @@ const darkMercenaryClick = (event, i) => {
             console.log('hi');
             break;
 
+    }
+
+    // Checking to see if mercenary is already owned
+    let isOwned = false;
+    let mercToRefund = '';
+    for (let j in itemsBought) {
+        // Data verification
+        if (itemsBought[j].textContent == undefined) {
+            continue;
+        }
+
+        if (itemsBought[j].dataset.name == itemName) {
+            isOwned = true;
+            mercToRefund = itemName;
+            break;
+        }
+    }
+
+    // Refunding the mercenary if already owned
+    if (isOwned) {
+        switch (mercToRefund) {
+            case 'Kevin Hernandez':
+                galacticCredits.textContent = parseInt(galacticCredits.textContent) + 200000;
+                break;
+            case 'Vince Lee':
+                galacticCredits.textContent = parseInt(galacticCredits.textContent) + 200000;
+                break;
+            case 'Manuel Nunez':
+                galacticCredits.textContent = parseInt(galacticCredits.textContent) + 500000;
+                break;
+            case 'Jerome Chenette':
+                galacticCredits.textContent = parseInt(galacticCredits.textContent) + 500000;
+                break;
+            default:
+                galacticCredits.textContent = parseInt(galacticCredits.textContent);
+                break;
+        }
+    }
+
+    // Adding mercenary to list of items if not already owned
+    if (!isOwned && itemName != '') {
+        const newItemTag = document.createElement('p');
+        newItemTag.classList.add('items-owned');
+        newItemTag.setAttribute('data-name', itemName);
+        newItemTag.setAttribute('data-count', 1);
+        newItemTag.textContent = itemName + ' x1';
+        document.querySelector('#upgradesBought').appendChild(newItemTag);
     }
 }
 

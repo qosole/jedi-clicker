@@ -1,5 +1,3 @@
-// This file should be loaded AFTER click.js
-
 // This function calculates how many credits should be earned automatically.
 // The player will earn 0 credits automatically by default.
 // When a mercenary is purchased, credits will begin to earn automatically based on the mercenary's strength
@@ -30,10 +28,8 @@ const earnAuto = () => {
         }
     }
 
-    // Update the credit count every 10 milliseconds
-    setInterval(() => {
-        creditCount.textContent = parseInt(creditCount.textContent) + autoStrength / 100
-    }, 10);
+    creditCount.textContent = parseInt(creditCount.textContent) + autoStrength / 100
 }
 
-earnAuto();
+// Update the credit count every 10 milliseconds
+setInterval(earnAuto, 10);
