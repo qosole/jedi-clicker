@@ -11,33 +11,46 @@ const darkItemsClick = (event, i) => {
     event.preventDefault();
     switch (i) {
             case 0: 
+            if (galacticCredits.textContent >= 25) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 25;
             console.log('Training Stick');
+            
+            }
             break;
 
             case 1: 
+            if (galacticCredits.textContent >= 100) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 100;
             console.log('Blaster Gun');
+            }
             break;
 
             case 2: 
+            if (galacticCredits.textContent >= 200) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 200;
             console.log('Helper Droid');
+            }
             break;
 
             case 3: 
+            if (galacticCredits.textContent >= 500) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 500;
             console.log('Lightsaber');
+            }
             break;
 
             case 4: 
+            if (galacticCredits.textContent >= 1000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 1000;
             console.log('Double Lightsaber');
+            }
             break;
 
             case 5: 
+            if (galacticCredits.textContent >= 5000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 5000;
             console.log('Force Amplifier');
+            }
             break;
 
         default:
@@ -57,23 +70,31 @@ const darkMercenaryClick = (event, i) => {
     event.preventDefault();
     switch (i) {
             case 0: 
+            if (galacticCredits.textContent >= 200000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 200000;
             console.log('Kevin');
+            }
             break;
 
             case 1: 
+            if (galacticCredits.textContent >= 200000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 200000;
             console.log('Vince');
+            }
             break;
 
             case 2: 
+            if (galacticCredits.textContent >= 500000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 500000;
             console.log('Manuel');
+            }
             break;
 
             case 3: 
+            if (galacticCredits.textContent >= 200000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 500000;
             console.log('Jerome');
+            }
             break;
 
         default:
@@ -94,33 +115,45 @@ const lightItemsClick = (event, i) => {
     event.preventDefault();
     switch (i) {
             case 0: 
+            if (galacticCredits.textContent >= 25) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 25;
             console.log('Training Stick');
+            }
             break;
 
             case 1: 
+            if (galacticCredits.textContent >= 100) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 100;
             console.log('Blaster Gun');
+            }
             break;
 
             case 2: 
+            if (galacticCredits.textContent >= 200) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 200;
             console.log('Helper Droid');
+            }
             break;
 
             case 3: 
+            if (galacticCredits.textContent >= 500) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 500;
             console.log('Lightsaber');
+            }
             break;
 
             case 4: 
+            if (galacticCredits.textContent >= 1000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 1000;
             console.log('Double Lightsaber');
+            }
             break;
 
             case 5: 
+            if (galacticCredits.textContent >= 5000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 5000;
             console.log('Force Amplifier');
+            }
             break;
 
         default:
@@ -140,23 +173,31 @@ const lightMercenaryClick = (event, i) => {
     event.preventDefault();
     switch (i) {
             case 0: 
+            if (galacticCredits.textContent >= 200000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 200000;
             console.log('Kevin');
+            }
             break;
 
             case 1: 
+            if (galacticCredits.textContent >= 200000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 200000;
             console.log('Vince');
+            }
             break;
 
             case 2: 
+            if (galacticCredits.textContent >= 500000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 500000;
             console.log('Manuel');
+            }
             break;
 
             case 3: 
+            if (galacticCredits.textContent >= 500000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 500000;
             console.log('Jerome');
+            }
             break;
 
         default:

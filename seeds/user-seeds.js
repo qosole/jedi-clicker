@@ -6,6 +6,11 @@ const userData = [
         username: 'qosole',
         password: 'password',
         galactic_credits: '99999999999999'
+    },
+    {
+        username: 'eric',
+        password: 'password',
+        galactic_credits: '1000000000'
     }
 ];
 
