@@ -1,5 +1,6 @@
 const enemy = document.querySelector('.enemy');
 const creditCount = document.querySelector('#credit-count');
+const strengthCount = document.querySelector('#strength-count');
 // The player's items bought should update as fast as possible to allow for responsive gameplay
 let itemsBought;
 setInterval(() => {
