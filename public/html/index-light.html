@@ -6,8 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <link rel="stylesheet" type="text/css" href="tooltipster/dist/css/tooltipster.bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script type="text/javascript" src="tooltipster/dist/js/tooltipster.bundle.min.js"></script>
     <link rel="stylesheet" href="../css/style.css" />
     <title>Jedi Clicker</title>
+    <script>
+        $(document).ready(function() {
+            $('.tooltip').tooltipster();
+        });
+    </script>
     <link rel="icon" type="image/x-icon" href="../assets/images/Jedi-Clicker-Favicon.png">
 </head>
 
@@ -20,7 +30,7 @@
                 <img class="logo" src="../assets/images/Jedi-Clicker-Logo.png" />
             </div>
             <div id="upgradesBought">
-              <h2 class="secondaryTitle">Items Bought</h2>
+              <h2 class="secondaryTitle">Items Bought <i class="fa-solid fa-circle-question" class="tooltip" title="This displays the items you've bought"></i></h2>
                 {{gameData.[1]}}
                 {{!-- {{#each gameData.[1]}}
                 <p>
@@ -32,7 +42,7 @@
 
         <div id="center">
             <div id="credits">
-                <h1 class="credits">Credits: <span id='credit-count'>{{gameData.0.galactic_credits}}</span></h1>
+                <h1 class="credits">Credits: <span id='credit-count'>{{gameData.0.galactic_credits}}</span> <i class="fa-solid fa-circle-question" class="tooltip" title="Click on the enemy to gain credits!"></i></h1>
             </div>
             <div id="enemy">
                 <img class="enemy" src="../assets/images/Dark-Enemy.png" />
@@ -45,7 +55,7 @@
             </div>
             <div id="upgrades">
                 <div class="items">
-                    <h2 class="secondaryTitle">Items</h2>
+                    <h2 class="secondaryTitle">Items <i class="fa-solid fa-circle-question" class="tooltip" title="Buy items to increase your strength"></i></h2>  
                     <div class=itemlist1>
                         <div class="itemcard-light"><span class=cardTitle>Training Stick</span><img class="item"
                                 title="Training Stick" src="../assets/images/Item-Training-Stick-Light.png" /><span
