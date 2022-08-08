@@ -259,7 +259,9 @@ img {
 
 #enemy {
     display: flex;
+    display: block;
     justify-content: center;
+    text-align: center;
 
 }
 
@@ -401,6 +403,36 @@ form {
     float: right;
     padding-top: 16px;
   }
+
+/* Bottom Save Game and Logout Div */
+
+  #logoutDiv {
+    text-align: center;
+    background-color: black;
+  }
+
+  #save-button {
+    background-color: rgb(25, 48, 162);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+
+  #logout-button {
+    background-color: rgb(25, 48, 162);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+
   
   /* Change styles for span and cancel button on extra small screens */
   @media screen and (max-width: 300px) {
