@@ -79,7 +79,7 @@ const darkItemsClick = (event, i) => {
             break;
         }
     }
-    if (!isOwned) {
+    if (!isOwned && itemName != '') {
         const newItemTag = document.createElement('p');
         newItemTag.classList.add('items-owned');
         newItemTag.setAttribute('data-name', itemName);
