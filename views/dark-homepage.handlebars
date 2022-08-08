@@ -4,7 +4,7 @@
             <img class="logo" src="/assets/images/Jedi-Clicker-Logo.png" />
         </div>
         <div id="upgradesBought">
-            <h2 class="secondaryTitle">Items Bought</h2>
+            <h2 class="secondaryTitle">Items Bought <i class="fa-solid fa-circle-question" class="tooltip" title="This displays the items you've bought"></i></h2>
             {{#each gameData.[1]}}
                 <p class="items-owned" data-name="{{@key}}" data-count="{{this}}">{{@key}} x{{this}}</p>
             {{/each}} 
@@ -13,7 +13,7 @@
 
     <div id="center">
         <div id="credits">
-            <h1 class="credits">Credits: <span id='credit-count'>{{gameData.0.galactic_credits}}</span></h1>
+            <h1 class="credits">Credits: <span id='credit-count'>{{gameData.0.galactic_credits}}</span><i class="fa-solid fa-circle-question" class="tooltip" title="Click on the enemy to gain credits!"></i></h1>
         </div>
         <div id="enemy">
             <img class="enemy" src="/assets/images/Light-Enemy.png" />
@@ -28,7 +28,7 @@
         </div>
         <div id="upgrades">
             <div class="items">
-                <h2 class="secondaryTitle">Items</h2>
+                <h2 class="secondaryTitle">Items <i class="fa-solid fa-circle-question" class="tooltip" title="Buy items to increase your strength"></i></h2>
                 <div class=itemlist1>
                     <div class="itemcard-dark"><span class=cardTitle>Training Stick</span><img class="item"
                             title="Training Stick" src="/assets/images/Item-Training-Stick-Dark.png" /><span
