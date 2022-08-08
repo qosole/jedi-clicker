@@ -9,12 +9,13 @@ let boughtItems = [];
 
 const darkItemsClick = (event, i) => {
     event.preventDefault();
+    let itemName = '';
     switch (i) {
             case 0: 
             if (galacticCredits.textContent >= 25) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 25;
             console.log('Training Stick');
-            
+            itemName = 'Training Stick';
             }
             break;
 
@@ -22,6 +23,7 @@ const darkItemsClick = (event, i) => {
             if (galacticCredits.textContent >= 100) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 100;
             console.log('Blaster Gun');
+            itemName = 'Blaster Gun';
             }
             break;
 
@@ -29,6 +31,7 @@ const darkItemsClick = (event, i) => {
             if (galacticCredits.textContent >= 200) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 200;
             console.log('Helper Droid');
+            itemName = 'Helper Droid';
             }
             break;
 
@@ -36,6 +39,7 @@ const darkItemsClick = (event, i) => {
             if (galacticCredits.textContent >= 500) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 500;
             console.log('Lightsaber');
+            itemName = 'Lightsaber';
             }
             break;
 
@@ -43,6 +47,7 @@ const darkItemsClick = (event, i) => {
             if (galacticCredits.textContent >= 1000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 1000;
             console.log('Double Lightsaber');
+            itemName = 'Double-Sided Lightsaber';
             }
             break;
 
@@ -50,13 +55,37 @@ const darkItemsClick = (event, i) => {
             if (galacticCredits.textContent >= 5000) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - 5000;
             console.log('Force Amplifier');
+            itemName = 'Force Amplifier';
             }
             break;
 
         default:
             console.log('hi');
             break;
+    }
 
+    // Adding item to Items Bought; if already exists, increment count
+    let isOwned = false;
+    for (let j in itemsBought) {
+        // Data verification
+        if (itemsBought[j].textContent == undefined) {
+            continue;
+        }
+
+        if (itemsBought[j].dataset.name == itemName) {
+            itemsBought[j].dataset.count++;
+            itemsBought[j].textContent = itemsBought[j].dataset.name + ' x' + itemsBought[j].dataset.count;
+            isOwned = true;
+            break;
+        }
+    }
+    if (!isOwned) {
+        const newItemTag = document.createElement('p');
+        newItemTag.classList.add('items-owned');
+        newItemTag.setAttribute('data-name', itemName);
+        newItemTag.setAttribute('data-count', 1);
+        newItemTag.textContent = itemName + ' x1';
+        document.querySelector('#upgradesBought').appendChild(newItemTag);
     }
 }
 
