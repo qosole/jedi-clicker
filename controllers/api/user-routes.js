@@ -88,10 +88,27 @@ router.put('/', async (req, res) => {
 // Update a user's items by session id
 router.put('/items/', async (req, res) => {
     try {
-        // req.body should have item_id
+        // req.body should have item_id and quantity
+        
+        // Checking to see if the user already has the item
+        const checkAlreadyOwned = await UserItem.findOne({
+            where: {
+                user_id: req.session.user_id,
+                item_id: req.body.item_id
+            }
+        });
+
+        // If already owned, update the count
+        if (checkAlreadyOwned) {
+            checkAlreadyOwned.quantity = req.body.quantity;
+            return;
+        }
+
+        // If not already owned, create new entry
         const newUserItemData = {
             user_id: req.session.user_id,
-            item_id: req.body.item_id
+            item_id: req.body.item_id,
+            quantity: req.body.quantity
         };
 
         const userItem = await UserItem.create(newUserItemData);
