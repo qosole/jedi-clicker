@@ -242,7 +242,6 @@ img {
     align-content: center;
     border-left: 3px solid grey;
     border-right: 3px solid grey;
-    cursor: url('../assets/images/Lightsaber-Cursor.png'), auto;
 }
 
 #credits {
@@ -262,6 +261,7 @@ img {
     display: block;
     justify-content: center;
     text-align: center;
+    cursor: url('../assets/images/Lightsaber-Cursor.png'), auto;
 
 }
 
@@ -433,8 +433,6 @@ form {
     margin-left: 10px;
   }
 
-  
-  /* Change styles for span and cancel button on extra small screens */
   @media screen and (max-width: 300px) {
     span.psw {
       display: block;
