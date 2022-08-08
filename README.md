@@ -70,7 +70,7 @@ Eric Rothmuller
 William Wei
 
 - [Github Profile](https://github.com/qosole)
-- [LinkedIn Profile](https://www.linkedin.com/in/william-wei-56292056/)
+- [LinkedIn Profile](https://www.linkedin.com/in/william-wei-044b35241/)
 
 Milo Tuthill
 
