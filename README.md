@@ -41,6 +41,7 @@ What things you need to install the software and how to install them.
 - [Express Handlebars](https://www.npmjs.com/package/express-handlebars)
 - [Handlebars](https://www.npmjs.com/package/handlebars)
 - [Tooltipster](https://github.com/calebjacob/tooltipster)
+- [Paint.net](https://www.getpaint.net/)
 
 
 ## Screen Shots
