@@ -1,6 +1,11 @@
 <main>
     <div id="loginpage">
+        {{#unless incorrectLogin}}
         <a href="./"><img class="loginlogo" src="../assets/images/Jedi-Clicker-Logo.png" /></a>
+        {{/unless}}
+        {{#if incorrectLogin}}
+        <a href="./"><img class="loginlogo" src="../../assets/images/Jedi-Clicker-Logo.png" /></a>
+        {{/if}}
         <div id="loginOrCreate">
             <div id="loginDiv">
                 <h2>Login</h2>
@@ -13,6 +18,10 @@
                         <input type="password" placeholder="Enter Password" name="password" required>
 
                         <button type="submit" id="loginButton">Login</button>
+
+                        {{#if incorrectLogin}}
+                        <p id="incorrect-login-alert">Incorrect username or password!</p>
+                        {{/if}}
                     </div>
                 </form>
             </div>
@@ -28,6 +37,7 @@
                         <input type="password" placeholder="Enter Password" name="password" required>
 
                         <button type="submit" id="createButton">Create Account</button>
+
                         {{#if usernameExists}}
                         <p id="taken-username-alert">Username already taken!</p>
                         {{/if}}
@@ -39,4 +49,4 @@
     </div>
 </main>
 
-<script src="/js/taken-username-alert.js"></script>
+<script src="/js/login-alerts.js"></script>

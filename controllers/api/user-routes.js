@@ -32,7 +32,7 @@ router.post('/login', async (req, res) => {
         const userData = await User.findOne({ where: { username: req.body.username } });
   
         if (!userData) {
-            res.status(400).json({ message: 'Incorrect username or password' });
+            res.render('login', { incorrectLogin: true });
             return;
         }
   
@@ -40,7 +40,7 @@ router.post('/login', async (req, res) => {
         const validPassword = userData.checkPassword(req.body.password);
     
         if (!validPassword) {
-            res.status(400).json({ message: 'Incorrect username or password' });
+            res.render('login', { incorrectLogin: true });
             return;
         }
     
