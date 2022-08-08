@@ -21,8 +21,8 @@ router.post('/', async (req, res) => {
             
             res.redirect('/');
         });
-
-    } catch (err) { res.status(500).json(err); }
+        
+    } catch (err) { res.render('login', { usernameExists: true }); }
 });
 
 // Login
