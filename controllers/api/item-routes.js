@@ -6,18 +6,13 @@ const { Item, Store, User, UserItem } = require('../../models');
 // GET all items
 router.get('/', async (req, res) => {
     try {
-        const allItems = await Item.findAll({
-            include: [
-                { model: Store },
-                { model: User }
-            ]
-        });
+        const allItems = await Item.findAll();
         if (!allItems) {
             res.status(404).json({ message: 'No item data in db' });
             return;
         }
 
-        res.status(200).json(allItems);
+        res.send(allItems);
 
     } catch (err) { res.status(500).json(err); }
 });
