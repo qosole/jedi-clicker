@@ -2,7 +2,12 @@
 
 const enemy = document.querySelector('.enemy');
 const creditCount = document.querySelector('#credit-count');
-const itemsBought = document.querySelectorAll('.items-owned');
+// The player's items bought should update as fast as possible to allow for responsive gameplay
+let itemsBought;
+setInterval(() => {
+    itemsBought = document.querySelectorAll('.items-owned');
+}, 10);
+
 
 // This function calculates the total strength of the player.
 // The base strength of the player is 1. 
@@ -19,22 +24,22 @@ const strengthCalc = () => {
         
         switch(itemsBought[i].dataset.name) {
             case 'Training Stick':
-                strength++;
+                strength += (1 * itemsBought[i].dataset.count);
                 break;
             case 'Blaster Gun':
-                strength += 3;
+                strength += (3 * itemsBought[i].dataset.count);
                 break;
             case 'Helper Droid':
-                strength += 6;
+                strength += (6 * itemsBought[i].dataset.count);
                 break;
             case 'Lightsaber':
-                strength += 25;
+                strength += (25 * itemsBought[i].dataset.count);
                 break;
             case 'Double-Sided Lightsaber':
-                strength += 50;
+                strength += (50 * itemsBought[i].dataset.count);
                 break;
             case 'Force Amplifier':
-                strength += 500;
+                strength += (500 * itemsBought[i].dataset.count);
                 break;
             default:
                 strength += 0;
