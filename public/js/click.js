@@ -53,4 +53,5 @@ const strengthCalc = () => {
 
 enemy.addEventListener('click', () => {
     creditCount.textContent = parseInt(creditCount.textContent) + strengthCalc();
+    strengthCount.textContent = strengthCalc();
 });
