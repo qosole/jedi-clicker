@@ -2,6 +2,7 @@
 
 const enemy = document.querySelector('.enemy');
 const creditCount = document.querySelector('#credit-count');
+const strengthCount = document.querySelector('#strength-count');
 const itemsBought = document.querySelectorAll('.items-owned');
 
 // This function calculates the total strength of the player.
@@ -47,4 +48,5 @@ const strengthCalc = () => {
 
 enemy.addEventListener('click', () => {
     creditCount.textContent = parseInt(creditCount.textContent) + strengthCalc();
+    strengthCount.textContent = strengthCalc();
 });

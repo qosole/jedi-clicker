@@ -259,7 +259,9 @@ img {
 
 #enemy {
     display: flex;
+    display: block;
     justify-content: center;
+    text-align: center;
 
 }
 
