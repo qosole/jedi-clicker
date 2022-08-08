@@ -14,8 +14,8 @@ const getItemId = async (itemName) => {
     return 0;
 }
 
-// Saving the game automatically when page is unloaded (dark-homepage or light-homepage)
-window.onbeforeunload = async () => {
+// Saving the game when the save button is clicked (in dark-homepage or light-homepage)
+document.querySelector('#save-button').addEventListener('click', async () => {
     const creditDataToSave = { 'galactic_credits': parseInt(creditCount.textContent) };
     await fetch('/api/users', {
         method: 'PUT',
@@ -55,4 +55,4 @@ window.onbeforeunload = async () => {
         });
     }
     return null;
-}
+});
