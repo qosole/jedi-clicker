@@ -59,4 +59,4 @@ enemy.addEventListener('click', () => {
 // Updating the strength count display
 setInterval(() => {
     strengthCount.textContent = strengthCalc();
-}, 100);
+}, 10);
