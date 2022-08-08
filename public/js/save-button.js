@@ -32,27 +32,13 @@ document.querySelector('#save-button').addEventListener('click', async () => {
             continue;
         }
 
-        // This logic is required to not resave existing items
-        let isDupe = false;
-        for (let j in originalItems) {
-            // Data validation
-            if (originalItems[j].textContent == undefined) {
-                continue;
-            }
-
-            if (itemsBought[i].dataset.name == originalItems[j].dataset.name) {
-                isDupe = true;
-                break;
-            }
-        }
-        if (!isDupe) {
-            itemDataToSave.push({ 
-                'item_id': await getItemId(itemsBought[i].dataset.name),
-                'quantity': itemsBought[i].dataset.count 
-            });
-        }
+        itemDataToSave.push({ 
+            'item_id': await getItemId(itemsBought[i].dataset.name),
+            'quantity': itemsBought[i].dataset.count 
+        });
     }
 
+    console.log(itemDataToSave);
     for (let i in itemDataToSave) {
         await fetch('/api/users/items', {
             method: 'PUT',

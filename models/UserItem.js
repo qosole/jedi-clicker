@@ -28,7 +28,7 @@ UserItem.init(
             }
         },
         quantity: {
-            type: DataTypes.BIGINT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             defaultValue: 1
         }

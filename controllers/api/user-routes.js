@@ -99,9 +99,10 @@ router.put('/items/', async (req, res) => {
         });
 
         // If already owned, update the count
-        if (checkAlreadyOwned) {
+        if (checkAlreadyOwned !== null) {
             checkAlreadyOwned.quantity = req.body.quantity;
             await checkAlreadyOwned.save();
+            res.status(200).end();
             return;
         }
 
