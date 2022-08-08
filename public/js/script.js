@@ -3,7 +3,6 @@ const darkMercenaryButtons = document.querySelectorAll('.mercenarycard-dark');
 const lightItemButtons = document.querySelectorAll('.itemcard-light');
 const lightMercenaryButtons = document.querySelectorAll('.mercenarycard-light');
 const galacticCredits = document.querySelector('#credit-count');
-let boughtItems = [];
 
 let trainingStickCost = 25;
 let blasterGunCost = 100;

@@ -7,7 +7,7 @@ setInterval(() => {
     itemsBought = document.querySelectorAll('.items-owned');
 }, 10);
 
-// Need to remember which items the user already had to not save multiple copies of the same data to the server
+// Need to remember which items the user already had so they do not get resaved and duplicated
 const originalItems = document.querySelectorAll('.items-owned');
 
 
