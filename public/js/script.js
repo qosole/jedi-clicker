@@ -241,7 +241,7 @@ const lightItemsClick = (event, i) => {
             if (galacticCredits.textContent >= doubleLightsaberCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - doubleLightsaberCost;
             console.log('Double Lightsaber');
-            itemName = 'Double-sided Lightsaber';
+            itemName = 'Double-Sided Lightsaber';
             }
             break;
 
