@@ -38,7 +38,6 @@ document.querySelector('#save-button').addEventListener('click', async () => {
         });
     }
 
-    console.log(itemDataToSave);
     for (let i in itemDataToSave) {
         await fetch('/api/users/items', {
             method: 'PUT',

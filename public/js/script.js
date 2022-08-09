@@ -22,7 +22,6 @@ const darkItemsClick = (event, i) => {
             case 0: 
             if (galacticCredits.textContent >= trainingStickCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - trainingStickCost;
-            console.log('Training Stick');
             itemName = 'Training Stick';
             }
             break;
@@ -30,7 +29,6 @@ const darkItemsClick = (event, i) => {
             case 1: 
             if (galacticCredits.textContent >= blasterGunCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - blasterGunCost;
-            console.log('Blaster Gun');
             itemName = 'Blaster Gun';
             }
             break;
@@ -38,7 +36,6 @@ const darkItemsClick = (event, i) => {
             case 2: 
             if (galacticCredits.textContent >= helperDroidCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - helperDroidCost;
-            console.log('Helper Droid');
             itemName = 'Helper Droid';
             }
             break;
@@ -46,7 +43,6 @@ const darkItemsClick = (event, i) => {
             case 3: 
             if (galacticCredits.textContent >= lightsaberCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - lightsaberCost;
-            console.log('Lightsaber');
             itemName = 'Lightsaber';
             }
             break;
@@ -54,7 +50,6 @@ const darkItemsClick = (event, i) => {
             case 4: 
             if (galacticCredits.textContent >= doubleLightsaberCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - doubleLightsaberCost;
-            console.log('Double Lightsaber');
             itemName = 'Double-Sided Lightsaber';
             }
             break;
@@ -62,13 +57,11 @@ const darkItemsClick = (event, i) => {
             case 5: 
             if (galacticCredits.textContent >= forceAmplifierCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - forceAmplifierCost;
-            console.log('Force Amplifier');
             itemName = 'Force Amplifier';
             }
             break;
 
         default:
-            console.log('hi');
             break;
     }
 
@@ -111,7 +104,6 @@ const darkMercenaryClick = (event, i) => {
             case 0: 
             if (galacticCredits.textContent >= kevinCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - kevinCost;
-            console.log('Kevin');
             itemName = 'Kevin Hernandez';
             }
             break;
@@ -119,7 +111,6 @@ const darkMercenaryClick = (event, i) => {
             case 1: 
             if (galacticCredits.textContent >= kevinCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - kevinCost;
-            console.log('Vince');
             itemName = 'Vince Lee';
             }
             break;
@@ -127,7 +118,6 @@ const darkMercenaryClick = (event, i) => {
             case 2: 
             if (galacticCredits.textContent >= jeromeCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - jeromeCost;
-            console.log('Manuel');
             itemName = 'Manuel Nunez';
             }
             break;
@@ -135,13 +125,11 @@ const darkMercenaryClick = (event, i) => {
             case 3: 
             if (galacticCredits.textContent >= jeromeCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - jeromeCost;
-            console.log('Jerome');
             itemName = 'Jerome Chenette';
             }
             break;
 
         default:
-            console.log('hi');
             break;
 
     }
@@ -208,7 +196,6 @@ const lightItemsClick = (event, i) => {
             case 0: 
             if (galacticCredits.textContent >= trainingStickCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - trainingStickCost;
-            console.log('Training Stick');
             itemName = 'Training Stick';
             }
             break;
@@ -216,7 +203,6 @@ const lightItemsClick = (event, i) => {
             case 1: 
             if (galacticCredits.textContent >= blasterGunCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - blasterGunCost;
-            console.log('Blaster Gun');
             itemName = 'Blaster Gun';
             }
             break;
@@ -224,7 +210,6 @@ const lightItemsClick = (event, i) => {
             case 2: 
             if (galacticCredits.textContent >= helperDroidCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - helperDroidCost;
-            console.log('Helper Droid');
             itemName = 'Helper Droid';
             }
             break;
@@ -232,7 +217,6 @@ const lightItemsClick = (event, i) => {
             case 3: 
             if (galacticCredits.textContent >= lightsaberCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - lightsaberCost;
-            console.log('Lightsaber');
             itemName = 'Lightsaber';
             }
             break;
@@ -240,7 +224,6 @@ const lightItemsClick = (event, i) => {
             case 4: 
             if (galacticCredits.textContent >= doubleLightsaberCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - doubleLightsaberCost;
-            console.log('Double Lightsaber');
             itemName = 'Double-sided Lightsaber';
             }
             break;
@@ -248,13 +231,11 @@ const lightItemsClick = (event, i) => {
             case 5: 
             if (galacticCredits.textContent >= forceAmplifierCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - forceAmplifierCost;
-            console.log('Force Amplifier');
             itemName = 'Force Amplifier';
             }
             break;
 
         default:
-            console.log('hi');
             break;
 
     }
@@ -297,7 +278,6 @@ const lightMercenaryClick = (event, i) => {
             case 0: 
             if (galacticCredits.textContent >= kevinCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - kevinCost;
-            console.log('Kevin');
             itemName = 'Kevin Hernandez';
             }
             break;
@@ -305,7 +285,6 @@ const lightMercenaryClick = (event, i) => {
             case 1: 
             if (galacticCredits.textContent >= kevinCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - kevinCost;
-            console.log('Vince');
             itemName = 'Vince Lee';
             }
             break;
@@ -313,7 +292,6 @@ const lightMercenaryClick = (event, i) => {
             case 2: 
             if (galacticCredits.textContent >= jeromeCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - jeromeCost;
-            console.log('Manuel');
             itemName = 'Manuel Nunez';
             }
             break;
@@ -321,13 +299,11 @@ const lightMercenaryClick = (event, i) => {
             case 3: 
             if (galacticCredits.textContent >= jeromeCost) {
             galacticCredits.textContent = parseInt(galacticCredits.textContent) - jeromeCost;
-            console.log('Jerome');
             itemName = 'Jerome Chenette';
             }
             break;
 
         default:
-            console.log('hi');
             break;
 
     }
